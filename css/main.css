@@ -24,3 +24,7 @@
 .navbar-toggler {
     background: #fff !important;
 }
+
+body {
+    padding-top: 75px;
+}
