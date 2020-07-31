@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="56" viewBox="0 0 64 56">
+  <g id="javascript" transform="translate(-359 -600.147)">
+    <g id="icons8-javascript" transform="translate(366 594.147)">
+      <path id="Path_12" data-name="Path 12" d="M6,42V6H42V42Z" fill="#ffd600"/>
+      <path id="Path_13" data-name="Path 13" d="M29.538,32.947c.692,1.124,1.444,2.2,3.037,2.2,1.338,0,2.04-.665,2.04-1.585,0-1.1-.726-1.492-2.2-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841,0-2.41,1.845-4.244,4.728-4.244a4.777,4.777,0,0,1,4.592,2.573l-2.514,1.607A2.2,2.2,0,0,0,32.46,24.8a1.4,1.4,0,0,0-1.545,1.377c0,.964.6,1.354,1.985,1.951l.807.344C36.452,29.645,38,30.839,38,33.523,38,36.415,35.716,38,32.65,38A5.9,5.9,0,0,1,27,34.632Zm-11.586.082a2.731,2.731,0,0,0,2.381,1.6c1.058,0,1.667-.418,1.667-2.043V22h3.333V33.1c0,3.367-1.953,4.9-4.805,4.9a5.848,5.848,0,0,1-5.195-3.368Z" fill="#000001"/>
+    </g>
+    <text id="JavaScript-2" data-name="JavaScript" transform="translate(359 653.147)" fill="#f9f9f9" font-size="18" font-family="Microsoft-Yi-Baiti, Microsoft Yi Baiti" font-style="italic"><tspan x="0" y="0">JavaScript</tspan></text>
+  </g>
+</svg>

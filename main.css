@@ -1,0 +1,207 @@
+
+/* //////////////CONTAINER////////////////////// */
+.grid-container {
+    display: flex;
+    display: grid;
+    /* position: absolute; */
+    
+    grid-template: 
+            "a a a a a " 26px
+            "b i g h d" 46px 
+            "b i c c c" 648px 
+            "b i c c c" 334px 
+            "e e e e e" 26px / 79px 270px 353px 353px 865px ;
+      
+  }
+  .top{
+    grid-area: a;
+      background-color: #3C3C3C;
+      font-family: 'Segoe UI';
+      color: #C2C2C2;
+      font-size: 18px;
+      text-align: center;
+  }
+  .nav{
+    
+    grid-area: b;
+      background-color: #333333;
+
+  }
+  .navmenu{
+    grid-area: i;
+    background-color: #262525;
+    display: none;
+
+  }
+  .code{
+    position: relative;
+    left: -270px;
+    width: 1841;
+
+    padding-top: 21px;
+    display: flex;
+    grid-area: c;
+      background-color:#1E1E1E;
+  }
+  .tabback {
+    position: relative;
+    left: -270px;
+    width: 1135;
+
+    grid-area: d;
+      background-color: #252526;
+  }
+
+  .tab1 {
+    position: relative;
+    left: -270px;
+    grid-area: g;
+      background-color: #1E1E1E;
+  }
+  .tab2 {
+    position: relative;
+    left: -270px;
+    grid-area: h;
+      background-color: #2D2D2D;
+  } 
+.footer {
+  grid-area: e;
+    background-color: #007ACC;
+}
+.output {
+  margin-top: 30px;
+  margin-left: -86px;
+  width: 1841px;
+  
+  background-color: #1E1E1E;
+  border-top: solid 1px #707070;
+}
+
+  /* ////////////////CODE///////////////////// */
+  #rownum{
+    color: #4B4A4A;
+    font-size: 22px;
+    font-family: 'Source Code Pro';
+    line-height: 1.28;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #runico{
+    padding-top: 10px;
+    padding-left: 18px;
+  }
+  #fileico{
+    padding-top: 10px;
+    padding-left: 18px;
+  }
+
+  #homeico{
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+ 
+  #smallfileico{
+    padding-top: 10px;
+    padding-left: 10px;
+
+   
+  }
+  .tabtxt{
+    position: relative;
+    top: -6px;
+    left: 10px;
+    font-family: 'Segoe UI';
+    color: #C2C2C2;
+    font-size: 20px;
+  }
+  .outputbox{
+    display: flex;
+    font-family: 'Segoe UI';
+    color: #C2C2C2;
+    font-size: 25px;
+    
+  }
+  #outputtxt2{
+    padding-top: 75px;
+
+  }
+  #smallrunico{
+    padding-top: 75px;
+    padding-left: 9px;
+  }
+  #smallfile{
+    position: relative;
+    top: 7px;
+    padding-left: 9px;
+  }
+  #outputtxt{
+    padding-top: 10px;
+    padding-left: 50px;
+
+  }
+  .codetxt{
+    display: flex;
+    flex-flow:column;
+    font-size: 22px;
+    font-family: 'Source Code Pro';
+    line-height: 1.28;
+    color: white;
+  }
+
+  /* ////////FONT COLORS //////////////// */
+  .purple{
+    color: #A65AB3;
+  }
+  .lightblue{
+    color: #64B1CF;
+  }
+  .brown{
+    color: #C37E5B;
+  }
+  .green{
+    color: #5E813F;
+  }
+  .orange{
+    color: #DB990D;
+  }
+  .yellow{
+    color: #D5DF96;
+  }
+  .blue{
+    color: #3A6AB8 ;
+  }
+  /* /////////////////////////////////// */
+  #commenttxt{
+    padding-top: 85px;
+  }
+  #functiontxt{
+    padding-top: 29px;
+  }
+  #functiontxt2{
+    border-left:  1px solid #707070;
+    padding-left: 20px;
+  }
+  #functiontxt3{
+    border-left:  1px solid #707070;
+    padding-left: 20px;
+  }
+  #functiontxt4{
+    padding-top: 28px;
+    
+  }
+  #functiontxt6{
+    padding-top: 27px;
+    
+  }
+
+  .nospace{
+    word-spacing:-15px
+  }
+  #me{
+    position: absolute;
+    right: 100px;
+    top: 150px;
+  
+  }
+
