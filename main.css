@@ -1,17 +1,29 @@
 
 /* //////////////CONTAINER////////////////////// */
+body{
+  max-width: 1vw;
+  height: 1vh;
+}
 .grid-container {
-    display: flex;
+  /* position: relative; */
+    /* display: flex; */
     display: grid;
     /* position: absolute; */
+    /* width: 100%;
+    height: 100%; */
     
     grid-template: 
-            "a a a a a " 26px
-            "b i g h d" 46px 
-            "b i c c c" 648px 
-            "b i c c c" 334px 
-            "e e e e e" 26px / 79px 270px 353px 353px 865px ;
+            "a a a a a "  26px /**/
+            "b i g h d" 46px/*  */
+            "b i c c c" 648px /*  */
+            "b i c c c" 334px /*  */
+            "e e e e e" 26px/*   */
+            / 79px 270px 353px 353px 865px  ; /**/
+
+            /*4.1% 14% 18.4% 18.4% 45.1% */
+            /* 2.4% 4.3% 60% 30.9% 2.4%*/
       
+   
   }
   .top{
     grid-area: a;
@@ -20,19 +32,27 @@
       color: #C2C2C2;
       font-size: 18px;
       text-align: center;
+      
+      
   }
   .nav{
     
     grid-area: b;
       background-color: #333333;
+      
 
   }
   .navmenu{
     grid-area: i;
     background-color: #262525;
     display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #D4D4D4;
+    padding-top: 10px;
+    padding-left: 10px;
 
   }
+  
   .code{
     position: relative;
     left: -270px;
@@ -90,10 +110,16 @@
   #runico{
     padding-top: 10px;
     padding-left: 18px;
+    
+  }
+  .runico{
+    fill: #216583 !important;
   }
   #fileico{
-    padding-top: 10px;
-    padding-left: 18px;
+    margin-left: px;
+    margin-top: 10px;
+    padding-left: 12px;
+    border-left: solid 6px #333333;
   }
 
   #homeico{
@@ -203,5 +229,36 @@
     right: 100px;
     top: 150px;
   
+  }
+  .outtitle{
+    font-weight: 700;
+    border-bottom: solid 1px #C2C2C2;
+    padding-bottom: 10px;
+  }
+  #explorertxt{
+    padding-bottom: 30px;
+    font-size: 18px;
+  }
+  #projectstxt{
+    font-weight: 1000;
+    font-size: 18px;
+  }
+  #contacttxt{
+    font-weight: 1000;
+    font-size: 18px;
+    border-bottom: solid 1px #333333;
+    padding-bottom: 13px;
+    margin-left: -10px;
+    padding-left: 10px;
+  }
+  #projectlist{
+    margin-top: 4px;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 30px;
+    border-bottom: solid 1px #333333;
+    padding-bottom: 10px;
+    margin-left: -10px;
+    margin-bottom: 10px;
   }
 

@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
   <link rel="stylesheet" href="main.css">
@@ -12,10 +13,27 @@
     
     <div class="grid-item top">korpi.digital</div>
     <div class="grid-item nav">
-      <div id="runico"><img src="icons/runbtn.svg" ></div>  
+      
+      <svg id="runico" xmlns="http://www.w3.org/2000/svg" width="55" height="60" viewBox="0 0 55 60">
+      <g transform="translate(55) rotate(90)" fill="#333" stroke-linejoin="round">
+        <path class="" d="M 49.89274597167969 50.5 L 10.10725593566895 50.5 C 9.364255905151367 50.5 8.980199813842773 50.03993225097656 8.817411422729492 49.76570129394531 C 8.654611587524414 49.491455078125 8.434621810913086 48.93400192260742 8.790410995483398 48.28172302246094 L 28.68315505981445 11.81168937683105 C 29.05415534973145 11.1315221786499 29.66744422912598 11.02996730804443 30 11.02996730804443 C 30.33255577087402 11.02996730804443 30.94584465026855 11.1315221786499 31.31685638427734 11.81169986724854 L 51.20958709716797 48.28172302246094 C 51.56537628173828 48.93400192260742 51.34540176391602 49.491455078125 51.18259811401367 49.76568984985352 C 51.01979827880859 50.03993225097656 50.63574600219727 50.5 49.89274597167969 50.5 Z" stroke="none"/>
+        <path id="runbtn" d="M 29.99999618530273 18.79494476318359 L 15.16086959838867 46 L 44.83911514282227 46 L 29.99999618530273 18.79494476318359 M 29.99999809265137 6.529964447021484 C 32.06515884399414 6.529964447021484 34.13031768798828 7.572257995605469 35.26736450195313 9.656848907470703 L 55.16011810302734 46.12688446044922 C 57.34098434448242 50.1251335144043 54.44710159301758 55 49.89274978637695 55 L 10.10725021362305 55 C 5.552898406982422 55 2.659015655517578 50.1251335144043 4.839881896972656 46.12688446044922 L 24.73261642456055 9.656848907470703 C 25.86967468261719 7.572257995605469 27.93483734130859 6.529964447021484 29.99999809265137 6.529964447021484 Z" stroke="none" fill="#71b962"/>
+      </g>
+      </svg>
+       
       <div id="fileico"><img src="icons/file.svg" ></div>  
     </div>
-    <div class="grid-item navmenu" id="navmenu"></div>
+    <div class="grid-item navmenu" id="navmenu">
+      <div id="explorertxt">EXPLORER</div>
+      <div id="projectstxt">PROJECTS</div>
+      <ul id="projectlist">
+        <li>Project 1</li>
+        <li>Project 2</li>
+        <li>Project 3</li>
+        <li>Project 4</li>
+      </ul>
+      <div id="contacttxt">CONTACT</div>
+    </div>
     <div class="grid-item tabback" id="tabback"></div>
     <div class="grid-item tab1" id="tab1">
       <div id="homeico"><img src="icons/homeicon.svg" ><span class="tabtxt">korpi.digital</span></div>
@@ -32,7 +50,7 @@
           <span class="purple">import</span>
           <span class="lightblue">tuomas</span>
           <span class="purple">from</span>
-          <span class="brown">'./good_developers'</span>;
+          <span class="brown">'./developers'</span>;
         </div>
         <div id="commenttxt">
           <span class="green">// Tuomas Korpi <br>
@@ -89,7 +107,7 @@
         </div>
         <div class="grid-item output" id="output">
           <div class="outputbox" id="outputbox">
-            <div id="outputtxt"><u>CONSOLE</u><br><br>Click top left arrow ( </div>    
+            <div id="outputtxt"><span class="outtitle">CONSOLE</span><br><br>Click top left arrow ( </div>    
             <div id="smallrunico"><img src="icons/smallrunico.svg" ></div>
             <div id="outputtxt2">) to run the code! </div>
         </div>
