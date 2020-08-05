@@ -1,128 +1,280 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
-  <link rel="stylesheet" href="main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.flex-cont {
+    display: flex;
+}
+.vertical{
+    flex-direction: column;
+}
+.horizontal{
+    flex-direction: row;
+}
+.header{
+    height: 3vh;
+    background-color: #3C3C3C;
+      font-family: 'Segoe UI';
+      color: #C2C2C2;
+      font-size: 2vh;
+      text-align: center;
+}
+.tab{
+    background-color: green; 
+}
+.menubar{
+    background-color: #333333;
+    height: 94vh;
+    position: absolute;
+}
+.menuopen{
+    background-color: #262525;
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #D4D4D4;
+    padding-top: 10px;
+    padding-left: 70px;
+    
+}
+.aside{
+    padding-top: 21px;
+    display: flex;
+    
+      background-color:#1E1E1E;
+}
+
+.row-2{
+    
+    background-color: saddlebrown;
+    
+    
+}
+#explorertxt{
+    padding-bottom: 30px;
+    font-size: 2vh;
+  }
+  #projectstxt{
+    font-weight: 1000;
+    font-size: 2vh;
+  }
+  #contacttxt{
+    font-weight: 1000;
+    font-size: 2vh;
+    border-bottom: solid 1px #333333;
+    padding-bottom: 13px;
+    margin-left: -10px;
+    padding-left: 10px;
+  }
+  #projectlist{
+    margin-top: 4px;
+    list-style-type: none;
+    font-size: 2vh;
+    line-height: 30px;
+    border-bottom: solid 1px #333333;
+    padding-bottom: 10px;
+    margin-left: -10px;
+    margin-bottom: 10px;
+  }
+  .tabback {
+      background-color: #252526;
+      width: 100%;
+  }
+  .tabtxt{
+    position: relative;
+    top: -9px;
+    left: 10px;
+    font-family: 'Segoe UI';
+    color: #C2C2C2;
+    font-size: 2vh;
+  }
+
+  .tab1 {
+      background-color: #1E1E1E;
+      width: 325px;
+
+  }
+  .tab2 {
+      background-color: #2D2D2D;
+      width: 325px;
+  
+        
+  } 
+  .tab{
+      display: flex;
+      flex-direction: row;
+      padding-left: 50px;
+      
+  }
+  #homeico{
+    
+    padding-left: 10px;
+  }
+ 
+  #smallfileico{
+    padding-left: 10px;
+  }
+  .footer {
+  background-color: #007ACC;
+  
+  height: 3vh
+}
+
+@media only screen and (max-width: 600px) {
+ /* mobile */
+  .menubar{width: 55px; }
+  .menuopen {width: 100vw;}
+  .menuopen{height: 10vh;}
+  .main{width: 100vw;} 
+  .mobile{flex-direction: column;} 
+  .aside{width: 100%;} 
+  .aside {height:78.5vh;} 
+  #mesvg{display: none;}
+}
+@media only screen and (min-width: 600px) {
+    .menubar{width: 55px; }
+  .menuopen {width: 200px;}
+  .menuopen{height: 88.6vh;}
+  .main{width: 100vw;} 
+  .aside{width: 100%;} 
+  .aside {height:87vh;}
+  #mesvg{width: 60%;}
+  #mesvg{display: none;}
+  
+   
+}
+
+@media only screen and (min-width: 1200px) {
+  /* For desktop: */
+  .menubar{width: 55px; }
+  .menuopen {width: 200px;}
+  .menuopen{height: 88.6vh;}
+  .main{width: 100vw;} 
+  .aside{width: 100%;} 
+  .aside {height:87vh;}
+  #mesvg{display: block;}
+  #mesvg{width: 100%;}
+  
+}
+</style>
+<link rel="stylesheet" href="code.css">
 </head>
 <body>
-
-
-
-<div class="grid-container">
-    
-    <div class="grid-item top">korpi.digital</div>
-    <div class="grid-item nav">
-      
-      <svg id="runico" xmlns="http://www.w3.org/2000/svg" width="55" height="60" viewBox="0 0 55 60">
-      <g transform="translate(55) rotate(90)" fill="#333" stroke-linejoin="round">
-        <path class="" d="M 49.89274597167969 50.5 L 10.10725593566895 50.5 C 9.364255905151367 50.5 8.980199813842773 50.03993225097656 8.817411422729492 49.76570129394531 C 8.654611587524414 49.491455078125 8.434621810913086 48.93400192260742 8.790410995483398 48.28172302246094 L 28.68315505981445 11.81168937683105 C 29.05415534973145 11.1315221786499 29.66744422912598 11.02996730804443 30 11.02996730804443 C 30.33255577087402 11.02996730804443 30.94584465026855 11.1315221786499 31.31685638427734 11.81169986724854 L 51.20958709716797 48.28172302246094 C 51.56537628173828 48.93400192260742 51.34540176391602 49.491455078125 51.18259811401367 49.76568984985352 C 51.01979827880859 50.03993225097656 50.63574600219727 50.5 49.89274597167969 50.5 Z" stroke="none"/>
-        <path id="runbtn" d="M 29.99999618530273 18.79494476318359 L 15.16086959838867 46 L 44.83911514282227 46 L 29.99999618530273 18.79494476318359 M 29.99999809265137 6.529964447021484 C 32.06515884399414 6.529964447021484 34.13031768798828 7.572257995605469 35.26736450195313 9.656848907470703 L 55.16011810302734 46.12688446044922 C 57.34098434448242 50.1251335144043 54.44710159301758 55 49.89274978637695 55 L 10.10725021362305 55 C 5.552898406982422 55 2.659015655517578 50.1251335144043 4.839881896972656 46.12688446044922 L 24.73261642456055 9.656848907470703 C 25.86967468261719 7.572257995605469 27.93483734130859 6.529964447021484 29.99999809265137 6.529964447021484 Z" stroke="none" fill="#71b962"/>
-      </g>
-      </svg>
-       
-      <div id="fileico"><img src="icons/file.svg" ></div>  
-    </div>
-    <div class="grid-item navmenu" id="navmenu">
-      <div id="explorertxt">EXPLORER</div>
-      <div id="projectstxt">PROJECTS</div>
-      <ul id="projectlist">
-        <li>Project 1</li>
-        <li>Project 2</li>
-        <li>Project 3</li>
-        <li>Project 4</li>
-      </ul>
-      <div id="contacttxt">CONTACT</div>
-    </div>
-    <div class="grid-item tabback" id="tabback"></div>
-    <div class="grid-item tab1" id="tab1">
-      <div id="homeico"><img src="icons/homeicon.svg" ><span class="tabtxt">korpi.digital</span></div>
-    </div>
-    <div class="grid-item tab2" id="tab2">
-      <div id="smallfileico"><img src="icons/smallfile.svg" ><span class="tabtxt">projects</span></div>
-    </div>
-    
-    <div class="grid-item code" id="code">
-      <div id="me"><img src="me.svg" ></div>
-      <div class="rownum" id="rownum"></div> 
-      <div class="codetxt">
-        <div id="importxt">
-          <span class="purple">import</span>
-          <span class="lightblue">tuomas</span>
-          <span class="purple">from</span>
-          <span class="brown">'./developers'</span>;
-        </div>
-        <div id="commenttxt">
-          <span class="green">// Tuomas Korpi <br>
-            // Developer, Designer, Engineer</span>
-        </div>
-        <div id="functiontxt">
-          <span class="blue">function</span>
-          <span class="yellow">introduction<span class="orange">(){
-          </span></span>
-        </div>
-        <div id="functiontxt2">
-          <span class="blue">let</span>
-          <span class="lightblue">dev = {</span>
-          <div id="functiontxt3">
-            <span class="lightblue">name: </span>
-            <span class="brown">"Tuomas Korpi"</span><br>
-            <span class="lightblue">age: </span>
-            <span class="brown">"29"</span><br>
-            <span class="lightblue">country: </span>
-            <span class="brown">"Finland"</span><br>
-            <span class="lightblue">city: </span>
-            <span class="brown">"Kuopio"</span><br>
-          </div>
-          <span class="lightblue">}</span>;
-          <div id="functiontxt4">
-            <span class="nospace"><span class="lightblue">console</span>.
-            <span class="yellow">log</span>
-            <span class="purple">(</span></span>
-            <span class="brown">`Hello World! I am</span>
-            <span class="nospace"><span class="blue">${</span>
-            <span class="lightblue">dev.name</span>
-            <span class="blue">}</span></span>
-            <span class="brown">from \</span><br>
-            <span class="nospace"><span class="blue">${</span>
-            <span class="lightblue">dev.city</span>
-            <span class="blue">}</span>
-            <span class="brown">,</span></span>
-            <span class="nospace"><span class="blue">${</span>
-            <span class="lightblue">dev.country</span>
-            <span class="blue">}</span>
-            <span class="brown">.`</span>
-            <span class="purple">)</span></span>;
-          </div>
-        </div>
-        <div id="functiontxt5">
-          <span class="orange">}</span>
-        </div>
-        <div id="functiontxt6">
-          <span class="nospace"><span class="yellow">introduction</span>
-          <span class="orange">()</span>;<br>
-          <span class="lightblue">tuomas</span>.
-          <span class="yellow">webpage</span>
-          <span class="orange">()</span>;</span>
-        </div>
-        <div class="grid-item output" id="output">
-          <div class="outputbox" id="outputbox">
-            <div id="outputtxt"><span class="outtitle">CONSOLE</span><br><br>Click top left arrow ( </div>    
-            <div id="smallrunico"><img src="icons/smallrunico.svg" ></div>
-            <div id="outputtxt2">) to run the code! </div>
-        </div>
-      </div> 
-    </div>
-    </div>
-    <div class="grid-item footer"></div>
-
-
-
-
+<div class="flex-cont vertical">
+<div class="header">korpi.digital</div>
+<div class="flex-cont horizontal row-2">
+<div class=" menubar ">
+    <svg id="runico" xmlns="http://www.w3.org/2000/svg" width="55" height="60" viewBox="0 0 55 60">
+        <g transform="translate(55) rotate(90)" fill="#333" stroke-linejoin="round">
+          <path class="" d="M 49.89274597167969 50.5 L 10.10725593566895 50.5 C 9.364255905151367 50.5 8.980199813842773 50.03993225097656 8.817411422729492 49.76570129394531 C 8.654611587524414 49.491455078125 8.434621810913086 48.93400192260742 8.790410995483398 48.28172302246094 L 28.68315505981445 11.81168937683105 C 29.05415534973145 11.1315221786499 29.66744422912598 11.02996730804443 30 11.02996730804443 C 30.33255577087402 11.02996730804443 30.94584465026855 11.1315221786499 31.31685638427734 11.81169986724854 L 51.20958709716797 48.28172302246094 C 51.56537628173828 48.93400192260742 51.34540176391602 49.491455078125 51.18259811401367 49.76568984985352 C 51.01979827880859 50.03993225097656 50.63574600219727 50.5 49.89274597167969 50.5 Z" stroke="none"/>
+          <path id="runbtn" d="M 29.99999618530273 18.79494476318359 L 15.16086959838867 46 L 44.83911514282227 46 L 29.99999618530273 18.79494476318359 M 29.99999809265137 6.529964447021484 C 32.06515884399414 6.529964447021484 34.13031768798828 7.572257995605469 35.26736450195313 9.656848907470703 L 55.16011810302734 46.12688446044922 C 57.34098434448242 50.1251335144043 54.44710159301758 55 49.89274978637695 55 L 10.10725021362305 55 C 5.552898406982422 55 2.659015655517578 50.1251335144043 4.839881896972656 46.12688446044922 L 24.73261642456055 9.656848907470703 C 25.86967468261719 7.572257995605469 27.93483734130859 6.529964447021484 29.99999809265137 6.529964447021484 Z" stroke="none" fill="#71b962"/>
+        </g>
+    </svg>
+    <div id="fileico"><img src="icons/file.svg" ></div> 
 </div>
-
+    <div class="flex-cont vertical main">
+        <div class="tab">
+            <div class="tab1" id="tab1">
+                <div id="homeico"><img src="icons/homeicon.svg" ><span class="tabtxt">korpi.digital</span></div>
+              </div>
+              <div class="tab2" id="tab2">
+                <div id="smallfileico"><img src="icons/smallfile.svg" ><span class="tabtxt">projects</span></div>
+              </div>
+              <div class="tabback" id="tabback"></div>
+        </div>
+        <div class="flex-cont horizontal mobile">
+            <div class="menuopen" id="menuopen">
+                <div id="explorertxt">EXPLORER</div>
+                <div id="projectstxt">PROJECTS</div>
+                <ul id="projectlist">
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <li>Project 3</li>
+                    <li>Project 4</li>
+                </ul>
+                <div id="contacttxt">CONTACT</div>
+            </div> 
+            <div class="aside">
+                <div id="me"><img id="mesvg" src="me.svg" ></div>
+                <div class="rownum" id="rownum"></div> 
+                <div class="codetxt">
+                    <div id="importxt">
+                    <span class="purple">import</span>
+                    <span class="lightblue">tuomas</span>
+                    <span class="purple">from</span>
+                    <span class="brown">'./developers'</span>;
+                    </div>
+                    <div id="commenttxt">
+                    <span class="green">// Tuomas Korpi <br>
+                        // Developer, Designer, Engineer</span>
+                    </div>
+                    <div id="functiontxt">
+                    <span class="blue">function</span>
+                    <span class="yellow">introduction<span class="orange">(){
+                    </span></span>
+                    </div>
+                    <div id="functiontxt2">
+                    <span class="blue">let</span>
+                    <span class="lightblue">dev = {</span>
+                    <div id="functiontxt3">
+                        <span class="lightblue">name: </span>
+                        <span class="brown">"Tuomas Korpi"</span><br>
+                        <span class="lightblue">age: </span>
+                        <span class="brown">"29"</span><br>
+                        <span class="lightblue">country: </span>
+                        <span class="brown">"Finland"</span><br>
+                        <span class="lightblue">city: </span>
+                        <span class="brown">"Kuopio"</span><br>
+                    </div>
+                    <span class="lightblue">}</span>;
+                    <div id="functiontxt4">
+                        <span class="nospace"><span class="lightblue">console</span>.
+                        <span class="yellow">log</span>
+                        <span class="purple">(</span></span>
+                        <span class="brown">`Hello World! I am</span>
+                        <span class="nospace"><span class="blue">${</span>
+                        <span class="lightblue">dev.name</span>
+                        <span class="blue">}</span></span>
+                        <span class="brown">from \</span><br>
+                        <span class="nospace"><span class="blue">${</span>
+                        <span class="lightblue">dev.city</span>
+                        <span class="blue">}</span>
+                        <span class="brown">,</span></span>
+                        <span class="nospace"><span class="blue">${</span>
+                        <span class="lightblue">dev.country</span>
+                        <span class="blue">}</span>
+                        <span class="brown">.`</span>
+                        <span class="purple">)</span></span>;
+                    </div>
+                    </div>
+                    <div id="functiontxt5">
+                    <span class="orange">}</span>
+                    </div>
+                    <div id="functiontxt6">
+                    <span class="nospace"><span class="yellow">introduction</span>
+                    <span class="orange">()</span>;<br>
+                    <span class="lightblue">tuomas</span>.
+                    <span class="yellow">webpage</span>
+                    <span class="orange">()</span>;</span>
+                </div>
+            <div class="output" id="output">
+                <div class="outputbox" id="outputbox">
+                    <div id="outputtxt"><span class="outtitle">CONSOLE</span><br><br>Click top left arrow ( </div>    
+                    <div id="smallrunico"><img src="icons/smallrunico.svg" ></div>
+                    <div id="outputtxt2">) to run the code! </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</div>
 <script src="./main.js"></script>
 </body>
-</html>
-
-

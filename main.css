@@ -4,46 +4,28 @@ body{
   max-width: 1vw;
   height: 1vh;
 }
-.grid-container {
-  /* position: relative; */
-    /* display: flex; */
-    display: grid;
-    /* position: absolute; */
-    /* width: 100%;
-    height: 100%; */
-    
-    grid-template: 
-            "a a a a a "  26px /**/
-            "b i g h d" 46px/*  */
-            "b i c c c" 648px /*  */
-            "b i c c c" 334px /*  */
-            "e e e e e" 26px/*   */
-            / 79px 270px 353px 353px 865px  ; /**/
 
-            /*4.1% 14% 18.4% 18.4% 45.1% */
-            /* 2.4% 4.3% 60% 30.9% 2.4%*/
-      
-   
-  }
-  .top{
-    grid-area: a;
+  .header{
+    
       background-color: #3C3C3C;
       font-family: 'Segoe UI';
       color: #C2C2C2;
       font-size: 18px;
       text-align: center;
+      width: 100%;
+      height: 3.8%;
       
       
   }
-  .nav{
+  .menubar{
     
-    grid-area: b;
+    
       background-color: #333333;
       
 
   }
-  .navmenu{
-    grid-area: i;
+  .menuopen{
+   
     background-color: #262525;
     display: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,39 +35,28 @@ body{
 
   }
   
-  .code{
-    position: relative;
+  .aside{
+    /* position: relative;
     left: -270px;
-    width: 1841;
+    width: 1841; */
 
     padding-top: 21px;
     display: flex;
-    grid-area: c;
+    
       background-color:#1E1E1E;
   }
   .tabback {
-    position: relative;
-    left: -270px;
-    width: 1135;
-
-    grid-area: d;
       background-color: #252526;
   }
 
   .tab1 {
-    position: relative;
-    left: -270px;
-    grid-area: g;
       background-color: #1E1E1E;
   }
   .tab2 {
-    position: relative;
-    left: -270px;
-    grid-area: h;
       background-color: #2D2D2D;
   } 
 .footer {
-  grid-area: e;
+  
     background-color: #007ACC;
 }
 .output {

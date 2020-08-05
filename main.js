@@ -7,7 +7,7 @@ function getNumRow(){
 }
 getNumRow();
 
-const navmenu = document.getElementById("navmenu");
+const menuopen = document.getElementById("menuopen");
 const fileico = document.getElementById("fileico");
 const code = document.getElementById("code");
 const output = document.getElementById("output");
@@ -26,27 +26,15 @@ function toggle(){
     return function(){
         //OPEN
         if (menucount % 2 != 0) {
-            navmenu.style.display = 'block';
+            menuopen.style.display = 'block';
             console.log("click");
-            //move grid
-            code.style.left = '0px';
-            tab1.style.left = '0px';
-            tab2.style.left = '0px';
-            code.style.width = '1571px';
-            output.style.width = '1571px';
             //border
             fileico.style.borderLeft = 'solid 6px #D4D4D4';
         }
         //CLOSE
         if(menucount % 2 == 0){
-            navmenu.style.display = 'none';
+            menuopen.style.display = 'none';
             console.log("click");
-            //move grid
-            code.style.left = '-270px';
-            code.style.width = '1841px';
-            tab1.style.left = '-270px';
-            tab2.style.left = '-270px';
-            output.style.width = '1841px';
             //no border
             fileico.style.borderLeft = 'solid 6px #333333';
 

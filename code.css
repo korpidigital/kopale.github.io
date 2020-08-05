@@ -1,0 +1,140 @@
+/* ////////////////CODE///////////////////// */
+#rownum{
+    color: #4B4A4A;
+    font-size: 16px;
+    font-family: 'Source Code Pro';
+    line-height: 1.28;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #runico{
+    padding-top: 10px;
+    padding-left: 18px;
+    
+  }
+  .runico{
+    fill: #216583 !important;
+  }
+  #fileico{
+    margin-left: px;
+    margin-top: 10px;
+    padding-left: 12px;
+    border-left: solid 6px #333333;
+  }
+
+  #homeico{
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+ 
+  #smallfileico{
+    padding-top: 10px;
+    padding-left: 10px;
+
+   
+  }
+
+  .outputbox{
+    display: flex;
+    font-family: 'Segoe UI';
+    color: #C2C2C2;
+    font-size: 2vh;
+    
+  }
+  #outputtxt2{
+    padding-top: 47px;
+
+  }
+  #smallrunico{
+    padding-top: 39px;
+    padding-left: 9px;
+  }
+  #smallfile{
+    position: relative;
+    top: 7px;
+    padding-left: 9px;
+  }
+  #outputtxt{
+    padding-top: 10px;
+    padding-left: 50px;
+
+  }
+  .codetxt{
+    display: flex;
+    flex-flow:column;
+    font-size: 2vh;
+    font-family: 'Source Code Pro';
+    line-height: 1.28;
+    color: white;
+  }
+
+  /* ////////FONT COLORS //////////////// */
+  .purple{
+    color: #A65AB3;
+  }
+  .lightblue{
+    color: #64B1CF;
+  }
+  .brown{
+    color: #C37E5B;
+  }
+  .green{
+    color: #5E813F;
+  }
+  .orange{
+    color: #DB990D;
+  }
+  .yellow{
+    color: #D5DF96;
+  }
+  .blue{
+    color: #3A6AB8 ;
+  }
+  /* /////////////////////////////////// */
+  #commenttxt{
+    padding-top: 85px;
+  }
+  #functiontxt{
+    padding-top: 29px;
+  }
+  #functiontxt2{
+    border-left:  1px solid #707070;
+    padding-left: 20px;
+  }
+  #functiontxt3{
+    border-left:  1px solid #707070;
+    padding-left: 20px;
+  }
+  #functiontxt4{
+    padding-top: 28px;
+    
+  }
+  #functiontxt6{
+    padding-top: 27px;
+    
+  }
+
+  .nospace{
+    word-spacing:-15px
+  }
+  #me{
+    position: absolute;
+    right: 20px;
+    top:70px;
+    
+  }
+  .outtitle{
+    font-weight: 700;
+    border-bottom: solid 1px #C2C2C2;
+    padding-bottom: 10px;
+  }
+  .output {
+    margin-top: 30px;
+    margin-left: -60px;
+    width: 100%;
+    
+    
+    background-color: #1E1E1E;
+    border-top: solid 1px #707070;
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.flex-cont {
+    display: flex;
+}
+.vertical{
+    flex-direction: column;
+}
+.horizontal{
+    flex-direction: row;
+}
+.header{
+    background-color: indigo;
+    height: 3vh;
+}
+.tab{
+    background-color: green;
+    height: 4vh;
+    
+   
+    
+}
+.menubar{
+    background-color: greenyellow;
+    height: 94vh;
+    position: absolute;
+}
+.menuopen{
+    background-color: hotpink;
+}
+.aside{
+    background-color: lightslategray;
+}
+.footer{
+    background-color: red;
+    height: 3vh;
+}
+.row-2{
+    
+    background-color: saddlebrown;
+    
+    
+}
+
+@media only screen and (max-width: 600px) {
+ /* mobile */
+  .menubar{width: 55px; }
+  .menuopen {width: 100vw;}
+  .menuopen{height: 10vh;}
+  .main{width: 100vw;} 
+  .mobile{flex-direction: column;} 
+  .aside{width: 100%;} 
+  .aside {height:80vh;} 
+
+}
+@media only screen and (min-width: 600px) {
+  /* For desktop: */
+  .menubar{width: 55px; }
+  .menuopen {width: 200px;}
+  .menuopen{height: 90vh;}
+  .main{width: 100vw;} 
+  .aside{width: 100%;} 
+  .aside {height:90vh;} 
+  
+}
+</style>
+</head>
+<body>
+<div class="flex-cont vertical">
+<div class="header"></div>
+<div class="flex-cont horizontal row-2">
+<div class=" menubar "></div>
+    <div class="flex-cont vertical main">
+        <div class="tab"></div>
+        <div class="flex-cont horizontal mobile">
+            <div class="menuopen"></div> 
+            <div class="aside"></div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</div>
+</body>
