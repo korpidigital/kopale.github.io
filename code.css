@@ -1,11 +1,10 @@
 /* ////////////////CODE///////////////////// */
 #rownum{
     color: #4B4A4A;
-    font-size: 16px;
     font-family: 'Source Code Pro';
     line-height: 1.28;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 10px;
   }
 
   #runico{
@@ -39,7 +38,6 @@
     display: flex;
     font-family: 'Segoe UI';
     color: #C2C2C2;
-    font-size: 2vh;
     
   }
   #outputtxt2{
@@ -56,14 +54,13 @@
     padding-left: 9px;
   }
   #outputtxt{
-    padding-top: 10px;
-    padding-left: 50px;
+    padding-top: 5px;
+    padding-left: 20px;
 
   }
   .codetxt{
     display: flex;
     flex-flow:column;
-    font-size: 2vh;
     font-family: 'Source Code Pro';
     line-height: 1.28;
     color: white;
@@ -93,10 +90,10 @@
   }
   /* /////////////////////////////////// */
   #commenttxt{
-    padding-top: 85px;
+    padding-top: 20px;
   }
   #functiontxt{
-    padding-top: 29px;
+    padding-top: 20px;
   }
   #functiontxt2{
     border-left:  1px solid #707070;
@@ -107,16 +104,16 @@
     padding-left: 20px;
   }
   #functiontxt4{
-    padding-top: 28px;
+    padding-top: 20px;
     
   }
   #functiontxt6{
-    padding-top: 27px;
+    padding-top: 20px;
     
   }
 
   .nospace{
-    word-spacing:-15px
+    word-spacing:-10px
   }
   #me{
     position: absolute;
@@ -127,12 +124,13 @@
   .outtitle{
     font-weight: 700;
     border-bottom: solid 1px #C2C2C2;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
   .output {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: -60px;
     width: 100%;
+    
     
     
     background-color: #1E1E1E;

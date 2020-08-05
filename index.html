@@ -32,7 +32,7 @@ body{
 }
 .menubar{
     background-color: #333333;
-    height: 94vh;
+    height: 97vh;
     position: absolute;
 }
 .menuopen{
@@ -46,7 +46,9 @@ body{
 }
 .aside{
     padding-top: 21px;
+    margin-left: 45px;
     display: flex;
+    padding-bottom: 42px;
     
       background-color:#1E1E1E;
 }
@@ -130,37 +132,45 @@ body{
 @media only screen and (max-width: 600px) {
  /* mobile */
   .menubar{width: 55px; }
-  .menuopen {width: 100vw;}
   .menuopen{height: 10vh;}
-  .main{width: 100vw;} 
+  .main{width: 97vw;} 
   .mobile{flex-direction: column;} 
   .aside{width: 100%;} 
   .aside {height:78.5vh;} 
   #mesvg{display: none;}
+  .codetxt{font-size: 12px;}
+  .rownum{font-size: 12px;}
+
 }
 @media only screen and (min-width: 600px) {
     .menubar{width: 55px; }
   .menuopen {width: 200px;}
-  .menuopen{height: 88.6vh;}
+  .menuopen{height: 86.7vh;}
   .main{width: 100vw;} 
   .aside{width: 100%;} 
-  .aside {height:87vh;}
+  .aside {height:78.8vh;}
   #mesvg{width: 60%;}
   #mesvg{display: none;}
+  .codetxt{font-size: 14px;}
+  .rownum{font-size: 14px;}
+
   
    
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
   /* For desktop: */
   .menubar{width: 55px; }
   .menuopen {width: 200px;}
-  .menuopen{height: 88.6vh;}
+  .menuopen{height: 86.7vh;}
   .main{width: 100vw;} 
   .aside{width: 100%;} 
-  .aside {height:87vh;}
+  .aside {height:78.8vh;}
   #mesvg{display: block;}
   #mesvg{width: 100%;}
+  .codetxt{font-size: 16px;}
+  .rownum{font-size: 16px;}
+
   
 }
 </style>
@@ -201,7 +211,7 @@ body{
                 </ul>
                 <div id="contacttxt">CONTACT</div>
             </div> 
-            <div class="aside">
+            <div class="aside" id="aside">
                 <div id="me"><img id="mesvg" src="me.svg" ></div>
                 <div class="rownum" id="rownum"></div> 
                 <div class="codetxt">

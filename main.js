@@ -1,15 +1,8 @@
-function getNumRow(){
-    let num = "";
-    for (let index = 1; index < 23; index++) {
-        num = num + index +"<br>";
-    }
-    document.getElementById("rownum").innerHTML = num;
-}
-getNumRow();
+
 
 const menuopen = document.getElementById("menuopen");
 const fileico = document.getElementById("fileico");
-const code = document.getElementById("code");
+const aside = document.getElementById("aside");
 const output = document.getElementById("output");
 const tab1 = document.getElementById("tab1"); 
 const tab2 = document.getElementById("tab2"); 
@@ -17,24 +10,38 @@ const tabback = document.getElementById("tabback");
 const me = document.getElementById("me");
 const outputbox = document.getElementById("outputbox");
 const runbtn = document.getElementById("runbtn");
+const rownum = document.getElementById("rownum");
+
+function getNumRow(){
+    let num = "";
+    for (let index = 1; index < 23; index++) {
+        num = num + index +"<br>";
+    }
+    rownum.innerHTML = num;
+}
+getNumRow();
 
 let menucount = 1;
-
 //FILE ICON CLICK OPEN MENU
 fileico.addEventListener("click", toggle());
 function toggle(){
     return function(){
+        let screenW = window.innerWidth;
         //OPEN
         if (menucount % 2 != 0) {
             menuopen.style.display = 'block';
-            console.log("click");
+            menuopen.style.marginRight = "-45px"
+            
+            
             //border
             fileico.style.borderLeft = 'solid 6px #D4D4D4';
+            
         }
         //CLOSE
         if(menucount % 2 == 0){
             menuopen.style.display = 'none';
-            console.log("click");
+            
+            
             //no border
             fileico.style.borderLeft = 'solid 6px #333333';
 
