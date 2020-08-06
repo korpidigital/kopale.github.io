@@ -59,6 +59,7 @@
 
   }
   .codetxt{
+    overflow: hidden;
     display: flex;
     flex-flow:column;
     font-family: 'Source Code Pro';

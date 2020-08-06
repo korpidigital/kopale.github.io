@@ -21,27 +21,49 @@ function getNumRow(){
 }
 getNumRow();
 
+let screenW = window.innerWidth;
+window.addEventListener('resize', reportWindowSize);
+function reportWindowSize() { 
+    screenW = window.innerWidth;
+    if (menucount % 2 != 0 && screenW > 600) {
+        aside.style.maxHeight = "vh";
+    }
+    console.log(screenW);
+}
+console.log(screenW);
 let menucount = 1;
 //FILE ICON CLICK OPEN MENU
 fileico.addEventListener("click", toggle());
 function toggle(){
     return function(){
-        let screenW = window.innerWidth;
+        screenW = window.innerWidth;
         //OPEN
-        if (menucount % 2 != 0) {
+        if (menucount % 2 != 0 && screenW < 600 ) {
             menuopen.style.display = 'block';
-            menuopen.style.marginRight = "-45px"
-            
-            
+            menuopen.style.marginRight = "-45px" 
+            //border
+            fileico.style.borderLeft = 'solid 6px #D4D4D4';
+            aside.style.maxHeight = "73.3vh";
+        }
+        else if (menucount % 2 != 0 && screenW > 600) {
+            aside.style.maxHeight = "vh";
+            menuopen.style.display = 'block';
+            menuopen.style.marginRight = "-45px" 
             //border
             fileico.style.borderLeft = 'solid 6px #D4D4D4';
             
+            
         }
         //CLOSE
-        if(menucount % 2 == 0){
+        if (menucount % 2 == 0 && screenW < 600 ) {
             menuopen.style.display = 'none';
-            
-            
+            //border
+            fileico.style.borderLeft = 'solid 6px #333333';
+            aside.style.maxHeight = "100vh";
+        }
+        else if(menucount % 2 == 0){
+            aside.style.maxHeight = "100vh";
+            menuopen.style.display = 'none';
             //no border
             fileico.style.borderLeft = 'solid 6px #333333';
 

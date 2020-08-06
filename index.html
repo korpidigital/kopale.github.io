@@ -36,30 +36,32 @@ body{
     position: absolute;
 }
 .menuopen{
+    width: 100%;
     background-color: #262525;
     display: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #D4D4D4;
     padding-top: 10px;
-    padding-left: 70px;
+    
     
 }
 .aside{
-    padding-top: 21px;
-    margin-left: 45px;
-    display: flex;
-    padding-bottom: 42px;
     
-      background-color:#1E1E1E;
+    padding-top: 21px;
+    margin-left: 37px;
+    display: flex;
+    
+    background-color:#1E1E1E;
 }
 
 .row-2{
-    
+    width: 100%;
     background-color: saddlebrown;
     
     
 }
 #explorertxt{
+    
     padding-bottom: 30px;
     font-size: 2vh;
   }
@@ -88,6 +90,7 @@ body{
   .tabback {
       background-color: #252526;
       width: 100%;
+      
   }
   .tabtxt{
     position: relative;
@@ -100,12 +103,14 @@ body{
 
   .tab1 {
       background-color: #1E1E1E;
-      width: 325px;
+      width: 40%;
+      min-width: 150px;
 
   }
   .tab2 {
       background-color: #2D2D2D;
-      width: 325px;
+      width: 40%;
+      min-width: 150px;
   
         
   } 
@@ -129,28 +134,30 @@ body{
   height: 3vh
 }
 
+
 @media only screen and (max-width: 600px) {
  /* mobile */
   .menubar{width: 55px; }
+  .menuopen {padding-left: 0px;}
   .menuopen{height: 10vh;}
-  .main{width: 97vw;} 
+  .main{width: 100vw;}
   .mobile{flex-direction: column;} 
-  .aside{width: 100%;} 
-  .aside {height:78.5vh;} 
-  #mesvg{display: none;}
+  .aside {height:84.7vh;} 
+  #me{display: none;}
   .codetxt{font-size: 12px;}
   .rownum{font-size: 12px;}
 
 }
+/* medium - disable image */
 @media only screen and (min-width: 600px) {
-    .menubar{width: 55px; }
-  .menuopen {width: 200px;}
+  .menubar{width: 55px; }
+  .menuopen {padding-left: 70px;}
+  .menuopen {max-width: 200px;}
   .menuopen{height: 86.7vh;}
-  .main{width: 100vw;} 
-  .aside{width: 100%;} 
-  .aside {height:78.8vh;}
+  .main{width: 100vw;}
+  .aside {height:84.7vh;}
   #mesvg{width: 60%;}
-  #mesvg{display: none;}
+  #me{display: none;}
   .codetxt{font-size: 14px;}
   .rownum{font-size: 14px;}
 
@@ -161,12 +168,12 @@ body{
 @media only screen and (min-width: 1100px) {
   /* For desktop: */
   .menubar{width: 55px; }
-  .menuopen {width: 200px;}
+  .menuopen {padding-left: 70px;}
+  .menuopen {max-width: 200px;}
   .menuopen{height: 86.7vh;}
-  .main{width: 100vw;} 
-  .aside{width: 100%;} 
-  .aside {height:78.8vh;}
-  #mesvg{display: block;}
+  .main{width: 100vw;}
+  .aside {height:84.7vh;}
+  #me{display: block;}
   #mesvg{width: 100%;}
   .codetxt{font-size: 16px;}
   .rownum{font-size: 16px;}
@@ -177,7 +184,7 @@ body{
 <link rel="stylesheet" href="code.css">
 </head>
 <body>
-<div class="flex-cont vertical">
+<div class="flex-cont vertical cont">
 <div class="header">korpi.digital</div>
 <div class="flex-cont horizontal row-2">
 <div class=" menubar ">
@@ -252,7 +259,8 @@ body{
                         <span class="nospace"><span class="blue">${</span>
                         <span class="lightblue">dev.name</span>
                         <span class="blue">}</span></span>
-                        <span class="brown">from \</span><br>
+                        <span class="brown"> \</span><br>
+                        <span class="brown">from </span>
                         <span class="nospace"><span class="blue">${</span>
                         <span class="lightblue">dev.city</span>
                         <span class="blue">}</span>
