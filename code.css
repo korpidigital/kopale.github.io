@@ -1,4 +1,7 @@
 /* ////////////////CODE///////////////////// */
+html, body{
+  height: 100%;
+}
 #rownum{
     color: #4B4A4A;
     font-family: 'Source Code Pro';
@@ -41,11 +44,11 @@
     
   }
   #outputtxt2{
-    padding-top: 47px;
+    padding-top: 35px;
 
   }
   #smallrunico{
-    padding-top: 39px;
+    padding-top: 26px;
     padding-left: 9px;
   }
   #smallfile{
@@ -91,10 +94,10 @@
   }
   /* /////////////////////////////////// */
   #commenttxt{
-    padding-top: 20px;
+    padding-top: 14px;
   }
   #functiontxt{
-    padding-top: 20px;
+    padding-top: 14px;
   }
   #functiontxt2{
     border-left:  1px solid #707070;
@@ -105,11 +108,11 @@
     padding-left: 20px;
   }
   #functiontxt4{
-    padding-top: 20px;
+    padding-top: 14px;
     
   }
   #functiontxt6{
-    padding-top: 20px;
+    padding-top: 14px;
     
   }
 
@@ -125,11 +128,13 @@
   .outtitle{
     font-weight: 700;
     border-bottom: solid 1px #C2C2C2;
-    padding-bottom: 5px;
+    padding-bottom: 1px;
+    margin-bottom: 8px;
+    
   }
   .output {
     margin-top: 10px;
-    margin-left: -60px;
+    margin-left: -20px;
     width: 100%;
     
     
