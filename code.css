@@ -13,7 +13,7 @@
   #runico{
     padding-top: 10px;
     padding-left: 10px;
-    width: 70%;
+    
     
     
   }
@@ -23,7 +23,7 @@
     margin-top: 10px;
     padding-left: 5px;
     border-left: solid 4px #333333;
-    width: 60%;
+    
   }
 
   #filePath_3, #filePath_4{
@@ -53,6 +53,7 @@
   #homeico{
     fill: #D4D4D4;
     width: 35px;
+    padding-left: 10px;
     
   }
   #smallfileBottom{
