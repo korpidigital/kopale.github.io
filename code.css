@@ -1,7 +1,7 @@
 /* ////////////////CODE///////////////////// */
-html, body{
+/* html, body{
   height: 100%;
-}
+} */
 #rownum{
     color: #4B4A4A;
     font-family: 'Source Code Pro';
@@ -12,29 +12,22 @@ html, body{
 
   #runico{
     padding-top: 10px;
-    padding-left: 18px;
+    padding-left: 10px;
+    width: 70%;
+    
     
   }
-  .runico{
-    fill: #216583 !important;
-  }
+
   #fileico{
-    margin-left: px;
+    
     margin-top: 10px;
-    padding-left: 12px;
-    border-left: solid 6px #333333;
+    padding-left: 5px;
+    border-left: solid 4px #333333;
+    width: 60%;
   }
 
-  #homeico{
-    padding-top: 10px;
-    padding-left: 10px;
-  }
- 
-  #smallfileico{
-    padding-top: 10px;
-    padding-left: 10px;
-
-   
+  #filePath_3, #filePath_4{
+    fill: #2D2D2D;
   }
 
   .outputbox{
@@ -43,18 +36,31 @@ html, body{
     color: #C2C2C2;
     
   }
-  #outputtxt2{
-    padding-top: 35px;
-
-  }
+ 
   #smallrunico{
-    padding-top: 26px;
+    
     padding-left: 9px;
+    width: 6%;
+  }
+  #path1{
+    fill: #1E1E1E;
   }
   #smallfile{
     position: relative;
     top: 7px;
     padding-left: 9px;
+  }
+  #homeico{
+    fill: #D4D4D4;
+    width: 35px;
+    
+  }
+  #smallfileBottom{
+    width: 3%;
+    margin-left: 4px;
+    position:relative;
+    top: 10px;
+    
   }
   #outputtxt{
     padding-top: 5px;
