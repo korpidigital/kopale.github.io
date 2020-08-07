@@ -12,6 +12,8 @@ const outputbox = document.getElementById("outputbox");
 const runbtn = document.getElementById("runbtn");
 const rownum = document.getElementById("rownum");
 
+let menuMode = "close";
+
 function getNumRow(){
     let num = "";
     for (let index = 1; index < 21; index++) {
@@ -21,44 +23,52 @@ function getNumRow(){
 }
 getNumRow();
 
+function asideHeight(mode){
+    let screenW = window.innerWidth;
+    console.log(screenW);
+    if (screenW < 600 && mode == "open") {
+        return "515px"
+    }
+    else{
+        return "595px"
+    }
+}
+
+window.onresize = function(){
+    console.log(menuMode);
+    aside.style.height = asideHeight(menuMode);
+}
+
 
 let menucount = 1;
 //FILE ICON CLICK OPEN MENU
 fileico.addEventListener("click", toggle());
 function toggle(){
-    return function(){
-        
+    return function(){    
         //OPEN
         if (menucount % 2 != 0  ) {
+            menuMode = "open";
             menuopen.style.display = 'block';
-            menuopen.style.marginRight = "-45px" 
+            menuopen.style.marginRight = "-37px" 
             //border
             fileico.style.borderLeft = 'solid 6px #D4D4D4';
-            
+            //minus top menu when small screen
+            aside.style.height = asideHeight(menuMode);
         }
-        else if (menucount % 2 != 0) {
-            
-            menuopen.style.display = 'block';
-            menuopen.style.marginRight = "-45px" 
-            //border
-            fileico.style.borderLeft = 'solid 6px #D4D4D4';
-            
-            
-        }
+        
         //CLOSE
-        if (menucount % 2 == 0 ) {
+        else if (menucount % 2 == 0 ) {
+            menuMode = "close";
             menuopen.style.display = 'none';
             //border
             fileico.style.borderLeft = 'solid 6px #333333';
+            aside.style.height = asideHeight(menuMode);
+
+           
           
         }
-        else if(menucount % 2 == 0){
-            
-            menuopen.style.display = 'none';
-            //no border
-            fileico.style.borderLeft = 'solid 6px #333333';
 
-        }
+        
     menucount ++;    
 }}
 //RUN ICON CLICK CHANGE TXT
