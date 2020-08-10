@@ -2,197 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-}
-
-.flex-cont {
-    display: flex;
-}
-.vertical{
-    flex-direction: column;
-}
-.horizontal{
-    flex-direction: row;
-}
-.header{
-    height: 19px;
-    background-color: #3C3C3C;
-      font-family: 'Segoe UI';
-      color: #C2C2C2;
-      font-size: 11px;
-      text-align: center;
-}
-.tab{
-    background-color: green;
-    height: 43px;
-}
-.menubar{
-    float:left;
-    background-color: #333333;
-    height: 659.4px;
-    position: absolute;
-}
-.menuopen{
-    width: 100%;
-    background-color: #262525;
-    display: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #D4D4D4;
-    padding-top: 10px;
-    
-    
-}
-.aside{
-    
-    padding-top: 21px;
-    margin-left: 37px;
-    display: flex;
-    
-    background-color:#1E1E1E;
-}
-
-.row-2{
-    width: 100%;
-    background-color: #1E1E1E;
-    
-    
-}
-#explorertxt{
-    
-    padding-bottom: 30px;
-    font-size: 2vh;
-  }
-  #projectstxt{
-    font-weight: 1000;
-    font-size: 2vh;
-  }
-  #contacttxt{
-    font-weight: 1000;
-    font-size: 2vh;
-    border-bottom: solid 1px #333333;
-    padding-bottom: 13px;
-    margin-left: -10px;
-    padding-left: 10px;
-  }
-  #projectlist{
-    margin-top: 4px;
-    list-style-type: none;
-    font-size: 2vh;
-    line-height: 30px;
-    border-bottom: solid 1px #333333;
-    padding-bottom: 10px;
-    margin-left: -10px;
-    margin-bottom: 10px;
-  }
-  .tabback {
-      background-color: #252526;
-      width: 100%;
-      
-  }
-  .tabtxt1{
-    position: relative;
-    top: -18px;
-    left: 10px;
-    font-family: 'Segoe UI';
-    color: #C2C2C2;
-    font-size: 14px;
-  }
-  .tabtxt2{
-    position: relative;
-    top: -1px;
-    left: 10px;
-    font-family: 'Segoe UI';
-    color: #C2C2C2;
-    font-size: 14px;
-  }
-
-  .tab1 {
-      background-color: #1E1E1E;
-      width: 40%;
-      min-width: 150px;
-      
-
-  }
-  .tab2 {
-      background-color: #2D2D2D;
-      width: 40%;
-      min-width: 150px;
-  
-        
-  } 
-  .tab{
-      display: flex;
-      flex-direction: row;
-      padding-left: 50px;
-      
-  }
- 
- 
-  
-  .footer {
-      clear: both;
-  background-color: #007ACC;
-  
-  height: 21px;
-}
-
-
-@media only screen and (max-width: 600px) {
- /* mobile */
-  .menubar{width: 55px; }
-  .menuopen {padding-left: 0px;}
-  .menuopen{height: 70px;}
-  .main{width: 100vw;}
-  .mobile{flex-direction: column;} 
-  .aside {height:595px;} 
-  #me{display: none;}
-  .codetxt{font-size: 11px;}
-  .rownum{font-size: 11px;}
-  #outputtxt2{padding-top: 34px;}
-  #smallrunico{padding-top: 25px;}
-}
-/* medium - disable image */
-@media only screen and (min-width: 600px) {
-  .menubar{width: 55px; }
-  .menuopen {padding-left: 70px;}
-  .menuopen {max-width: 200px;}
-  .menuopen{height: 606px;}
-  .main{width: 100vw;}
-  .aside {height:595px;}
-  #mesvg{width: 60%;}
-  #me{display: none;}
-  .codetxt{font-size: 14px;}
-  .rownum{font-size: 14px;}
-  #outputtxt2{padding-top: 41px;}
-  #smallrunico{padding-top: 33px;}
-  
-   
-}
-
-@media only screen and (min-width: 1100px) {
-  /* For desktop: */
-  .menubar{width: 55px; }
-  .menuopen {padding-left: 70px;}
-  .menuopen {max-width: 200px;}
-  .menuopen{height: 606px;}
-  .main{width: 100vw;}
-  .aside {height:595px;}
-  #me{display: block;}
-  #mesvg{width: 100%;}
-  .codetxt{font-size: 16px;}
-  .rownum{font-size: 16px;}
-  #outputtxt2{padding-top: 47px;}
-  #smallrunico{padding-top: 39px;}
-
-  
-}
-</style>
 <link rel="stylesheet" href="code.css">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="icons.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="projectGrid.css">
 </head>
 <body>
 <div class="flex-cont vertical cont">
@@ -321,93 +135,120 @@ body{
         </div>
         <div class="flex-cont horizontal mobile">
             <div class="menuopen" id="menuopen">
-                <div id="explorertxt">EXPLORER</div>
-                <div id="projectstxt">PROJECTS</div>
+                <div id="projectheader">
+                    <div id="explorertxt">EXPLORER</div>
+                    <div id="projectstxt">PROJECTS</div>
+                </div>
+                
                 <ul id="projectlist">
                     <li>Project 1</li>
                     <li>Project 2</li>
                     <li>Project 3</li>
                     <li>Project 4</li>
                 </ul>
-                <div id="contacttxt">CONTACT</div>
             </div> 
             <div class="aside" id="aside">
                 <div id="me"><img id="mesvg" src="me.svg" ></div>
-                <div class="rownum" id="rownum"></div> 
-                <div class="codetxt">
-                    <div id="importxt">
-                    <span class="purple">import</span>
-                    <span class="lightblue">tuomas</span>
-                    <span class="purple">from</span>
-                    <span class="brown">'./developers'</span>;
+                <div class="flex-cont horizontal">
+                    <div class="rownum" id="rownum"></div> 
+                    <div class="codetxt">
+                        <div id="importxt">
+                        <span class="purple">import</span>
+                        <span class="lightblue">tuomas</span>
+                        <span class="purple">from</span>
+                        <span class="brown">'./developers'</span>;
+                        </div>
+                        <div id="commenttxt">
+                        <span class="green">// Tuomas Korpi <br>
+                            // Developer, Designer, Engineer</span>
+                        </div>
+                        <div id="functiontxt">
+                        <span class="blue">function</span>
+                        <span class="yellow">introduction<span class="orange">(){
+                        </span></span>
+                        </div>
+                        <div id="functiontxt2">
+                        <span class="blue">let</span>
+                        <span class="lightblue">dev = {</span>
+                        <div id="functiontxt3">
+                            <span class="lightblue">name: </span>
+                            <span class="brown">"Tuomas Korpi"</span><br>
+                            <span class="lightblue">age: </span>
+                            <span class="brown">"29"</span><br>
+                            <span class="lightblue">country: </span>
+                            <span class="brown">"Finland"</span><br>
+                            <span class="lightblue">city: </span>
+                            <span class="brown">"Kuopio"</span><br>
+                        </div>
+                        <span class="lightblue">}</span>;
+                        <div id="functiontxt4">
+                            <span class="nospace"><span class="lightblue">console</span>.
+                            <span class="yellow">log</span>
+                            <span class="purple">(</span></span>
+                            <span class="brown">`Hello World! I am</span>
+                            <span class="nospace"><span class="blue">${</span>
+                            <span class="lightblue">dev.name</span>
+                            <span class="blue">}</span></span>
+                            <span class="brown"> \</span><br>
+                            <span class="brown">from </span>
+                            <span class="nospace"><span class="blue">${</span>
+                            <span class="lightblue">dev.city</span>
+                            <span class="blue">}</span>
+                            <span class="brown">,</span></span>
+                            <span class="nospace"><span class="blue">${</span>
+                            <span class="lightblue">dev.country</span>
+                            <span class="blue">}</span>
+                            <span class="brown">.`</span>
+                            <span class="purple">)</span></span>;
+                        </div>
+                        </div>
+                        <div id="functiontxt5">
+                        <span class="orange">}</span>
+                        </div>
+                    <div id="functiontxt6">
+                        <span class="nospace"><span class="yellow">introduction</span>
+                        <span class="orange">()</span>;<br>
+                        <span class="lightblue">tuomas</span>.
+                        <span class="yellow">webpage</span>
+                        <span class="orange">()</span>;</span>
                     </div>
-                    <div id="commenttxt">
-                    <span class="green">// Tuomas Korpi <br>
-                        // Developer, Designer, Engineer</span>
-                    </div>
-                    <div id="functiontxt">
-                    <span class="blue">function</span>
-                    <span class="yellow">introduction<span class="orange">(){
-                    </span></span>
-                    </div>
-                    <div id="functiontxt2">
-                    <span class="blue">let</span>
-                    <span class="lightblue">dev = {</span>
-                    <div id="functiontxt3">
-                        <span class="lightblue">name: </span>
-                        <span class="brown">"Tuomas Korpi"</span><br>
-                        <span class="lightblue">age: </span>
-                        <span class="brown">"29"</span><br>
-                        <span class="lightblue">country: </span>
-                        <span class="brown">"Finland"</span><br>
-                        <span class="lightblue">city: </span>
-                        <span class="brown">"Kuopio"</span><br>
-                    </div>
-                    <span class="lightblue">}</span>;
-                    <div id="functiontxt4">
-                        <span class="nospace"><span class="lightblue">console</span>.
-                        <span class="yellow">log</span>
-                        <span class="purple">(</span></span>
-                        <span class="brown">`Hello World! I am</span>
-                        <span class="nospace"><span class="blue">${</span>
-                        <span class="lightblue">dev.name</span>
-                        <span class="blue">}</span></span>
-                        <span class="brown"> \</span><br>
-                        <span class="brown">from </span>
-                        <span class="nospace"><span class="blue">${</span>
-                        <span class="lightblue">dev.city</span>
-                        <span class="blue">}</span>
-                        <span class="brown">,</span></span>
-                        <span class="nospace"><span class="blue">${</span>
-                        <span class="lightblue">dev.country</span>
-                        <span class="blue">}</span>
-                        <span class="brown">.`</span>
-                        <span class="purple">)</span></span>;
-                    </div>
-                    </div>
-                    <div id="functiontxt5">
-                    <span class="orange">}</span>
-                    </div>
-                <div id="functiontxt6">
-                    <span class="nospace"><span class="yellow">introduction</span>
-                    <span class="orange">()</span>;<br>
-                    <span class="lightblue">tuomas</span>.
-                    <span class="yellow">webpage</span>
-                    <span class="orange">()</span>;</span>
                 </div>
-            <div class="output" id="output">
-                <div class="outputbox" id="outputbox">
-                    <div id="outputtxt"><span class="outtitle">CONSOLE</span><br><br>Click top left arrow ( </div>    
-                    <svg id="smallrunico" xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
-                        <g transform="translate(31) rotate(90)" fill="#333" stroke-linejoin="round">
-                          <path id="path1" d="M 25.57802200317383 28 L 10.42198181152344 28 C 8.856472015380859 28 8.08225154876709 26.94875907897949 7.822052001953125 26.49678993225098 C 7.561851978302002 26.04481887817383 7.041512012481689 24.8474292755127 7.827611923217773 23.49359893798828 L 15.40564155578613 10.44256019592285 C 16.18838119506836 9.094499588012695 17.48071098327637 8.948969841003418 18.00000190734863 8.948969841003418 C 18.5192928314209 8.948969841003418 19.81162261962891 9.094499588012695 20.59436225891113 10.44256019592285 L 28.17239189147949 23.49359893798828 C 28.95849227905273 24.8474292755127 28.43815231323242 26.04481887817383 28.17795181274414 26.49678993225098 C 27.91775131225586 26.94875907897949 27.14353179931641 28 25.57802200317383 28 Z" stroke="none"/>
-                          <path id="path2" d="M 18.00000190734863 11.9489688873291 L 10.42198181152344 25 L 25.57803153991699 25.00000953674316 L 18.02453231811523 11.95178031921387 C 18.0221118927002 11.95100021362305 18.01299285888672 11.9489688873291 18.00000190734863 11.9489688873291 M 18.00000190734863 5.948966979980469 C 20.01620101928711 5.948966979980469 22.03240203857422 6.944694519042969 23.1887321472168 8.936149597167969 L 30.76676177978516 21.98719024658203 C 33.08933258056641 25.98716926574707 30.20341110229492 31 25.57802200317383 31 L 10.42198181152344 31 C 5.796592712402344 31 2.910671234130859 25.98716926574707 5.233242034912109 21.98719024658203 L 12.81127166748047 8.936149597167969 C 13.96760177612305 6.944694519042969 15.98380279541016 5.948966979980469 18.00000190734863 5.948966979980469 Z" stroke="none" fill="#71b962"/>
-                        </g>
-                      </svg>
-                      
-                    <div id="outputtxt2">) to run the code! </div>
-                </div>
+        </div>
+        <div class="output" id="output">
+            <div class="outputbox" id="outputbox">
+                <div id="outputtxt"><span class="outtitle">CONSOLE</span><br><br>Click top left arrow ( </div>    
+                <svg id="smallrunico" xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
+                    <g transform="translate(31) rotate(90)" fill="#333" stroke-linejoin="round">
+                      <path id="path1" d="M 25.57802200317383 28 L 10.42198181152344 28 C 8.856472015380859 28 8.08225154876709 26.94875907897949 7.822052001953125 26.49678993225098 C 7.561851978302002 26.04481887817383 7.041512012481689 24.8474292755127 7.827611923217773 23.49359893798828 L 15.40564155578613 10.44256019592285 C 16.18838119506836 9.094499588012695 17.48071098327637 8.948969841003418 18.00000190734863 8.948969841003418 C 18.5192928314209 8.948969841003418 19.81162261962891 9.094499588012695 20.59436225891113 10.44256019592285 L 28.17239189147949 23.49359893798828 C 28.95849227905273 24.8474292755127 28.43815231323242 26.04481887817383 28.17795181274414 26.49678993225098 C 27.91775131225586 26.94875907897949 27.14353179931641 28 25.57802200317383 28 Z" stroke="none"/>
+                      <path id="path2" d="M 18.00000190734863 11.9489688873291 L 10.42198181152344 25 L 25.57803153991699 25.00000953674316 L 18.02453231811523 11.95178031921387 C 18.0221118927002 11.95100021362305 18.01299285888672 11.9489688873291 18.00000190734863 11.9489688873291 M 18.00000190734863 5.948966979980469 C 20.01620101928711 5.948966979980469 22.03240203857422 6.944694519042969 23.1887321472168 8.936149597167969 L 30.76676177978516 21.98719024658203 C 33.08933258056641 25.98716926574707 30.20341110229492 31 25.57802200317383 31 L 10.42198181152344 31 C 5.796592712402344 31 2.910671234130859 25.98716926574707 5.233242034912109 21.98719024658203 L 12.81127166748047 8.936149597167969 C 13.96760177612305 6.944694519042969 15.98380279541016 5.948966979980469 18.00000190734863 5.948966979980469 Z" stroke="none" fill="#71b962"/>
+                    </g>
+                  </svg>
+                <div id="outputtxt2">) to run the code! </div>
             </div>
+        </div>
+    </div>
+    <div class="asideProject" id="asideProject">
+        <div class="row">
+            
+            <div class="project"></div>
+            <div class="project"></div>
+
+       
+            <div class="project"></div>
+            <div class="project"></div>
+
+        
+            <div class="project"></div>
+            <div class="project"></div>
+
+        
+            <div class="project"></div>
+            <div class="project"></div>
+
+        
+            <div class="project"></div>
+            <div class="project"></div>
+
         </div>
     </div>
 </div>

@@ -1,0 +1,68 @@
+
+@media only screen and (max-width: 600px) {
+    /* mobile */
+     .menubar{width: 55px; }
+     .menuopen {padding-left: 0px;}
+     .menuopen{height: 70px;}
+     .menuopen{flex-direction: row;}
+     .main{width: 100vw;}
+     .mobile{flex-direction: column;} 
+     .aside {height:595px;}
+     .asideProject {height:595px;}
+     #me{display: none;}
+     .codetxt{font-size: 11px;}
+     .rownum{font-size: 11px;}
+     #outputtxt2{padding-top: 34px;}
+     #smallrunico{padding-top: 25px;}
+     #output{font-size: 11px;}
+     ul#projectlist li{display: inline;}
+     #projectlist{border: none;}
+     #explorertxt{margin-left: 65px;}
+     #projectstxt{margin-top: -35px;}
+     #projectstxt{margin-left: 65px;}
+     
+   }
+   /* medium - disable image */
+   @media only screen and (min-width: 600px) {
+     .menubar{width: 55px; }
+     .menuopen {padding-left: 70px;}
+     .menuopen {max-width: 200px;}
+     .menuopen{height: 606px;}
+     .menuopen{flex-direction: column;}
+     .main{width: 100vw;}
+     .aside {height:595px;}
+     .asideProject {height:595px;}
+     #mesvg{width: 60%;}
+     #me{display: none;}
+     .codetxt{font-size: 14px;}
+     .rownum{font-size: 14px;}
+     #output{font-size: 14px;}
+     #outputtxt2{padding-top: 41px;}
+     #smallrunico{padding-top: 33px;}
+     ul#projectlist li{display: block}
+     
+     
+      
+   }
+   
+   @media only screen and (min-width: 1100px) {
+     /* For desktop: */
+     .menubar{width: 55px; }
+     .menuopen {padding-left: 70px;}
+     .menuopen {max-width: 200px;}
+     .menuopen{height: 606px;}
+     .menuopen{flex-direction: column;}
+     .main{width: 100vw;}
+     .aside {height:595px;}
+     .asideProject {height:595px;}
+     #me{display: block;}
+     #mesvg{width: 100%;}
+     .codetxt{font-size: 16px;}
+     .rownum{font-size: 16px;}
+     #output{font-size: 16px;}
+     #outputtxt2{padding-top: 48px;}
+     #smallrunico{padding-top: 42px;}
+     ul#projectlist li{display: block}
+   
+      
+  }
