@@ -1,10 +1,11 @@
 /* ////////////////CODE///////////////////// */
-/* html, body{
-  height: 100%;
-} */
+@font-face {
+  font-family: "SourceCodePro-Regular";
+  src: url("./fonts/SourceCodePro-Regular.ttf") format("truetype");
+}
 #rownum{
     color: #4B4A4A;
-    font-family: 'Source Code Pro';
+    font-family: 'SourceCodePro-Regular';
     line-height: 1.28;
     padding-left: 30px;
     padding-right: 10px;
@@ -29,7 +30,7 @@
     overflow: hidden;
     display: flex;
     flex-flow:column;
-    font-family: 'Source Code Pro';
+    font-family: 'SourceCodePro-Regular';
     line-height: 1.28;
     color: white;
   }

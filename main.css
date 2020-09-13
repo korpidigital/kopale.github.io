@@ -3,6 +3,7 @@ body{
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
+  background-color: #007ACC;
 }
 
 .flex-cont {
@@ -29,7 +30,8 @@ body{
 .menubar{
   float:left;
   background-color: #333333;
-  height: 659.4px;
+  min-height: 659.4px;
+  height: 94vh;
   position: absolute;
 }
 .menuopen{
@@ -39,6 +41,7 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #D4D4D4;
   padding-top: 10px;
+  height: 94vh;
   
   
   
@@ -50,8 +53,8 @@ body{
   margin-left: 37px;
   display: flex;
   flex-direction: column;
-  
   background-color:#1E1E1E;
+  height: 94vh;
 }
 .asideProject{
   display: none;
@@ -61,6 +64,7 @@ body{
   flex-direction: column;
   overflow: scroll;
   background-color:#1E1E1E;
+  height: 94vh;
 }
 
 .row-2{
