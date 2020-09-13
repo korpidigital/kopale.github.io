@@ -4,6 +4,7 @@ body{
   margin-right: 0;
   margin-bottom: 0;
   background-color: #007ACC;
+  
 }
 
 .flex-cont {
@@ -30,9 +31,9 @@ body{
 .menubar{
   float:left;
   background-color: #333333;
-  min-height: 659.4px;
-  height: 94vh;
-  position: absolute;
+  /* position: absolute; */
+  
+  
 }
 .menuopen{
   width: 100%;
@@ -41,20 +42,21 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #D4D4D4;
   padding-top: 10px;
-  height: 94vh;
+  min-height: 87vh;
   
   
-  
+
   
 }
 .aside{
   
   padding-top: 21px;
-  margin-left: 37px;
+  
   display: flex;
   flex-direction: column;
   background-color:#1E1E1E;
-  height: 94vh;
+  min-height: 86vh;
+  
 }
 .asideProject{
   display: none;
@@ -64,7 +66,8 @@ body{
   flex-direction: column;
   overflow: scroll;
   background-color:#1E1E1E;
-  height: 94vh;
+  min-height: 86vh;
+  
 }
 
 .row-2{
@@ -77,10 +80,12 @@ body{
   
   padding-bottom: 30px;
   font-size: 14px;
+  
 }
 #projectstxt{
   font-weight: 1000;
   font-size: 14px;
+ 
 
 }
 
@@ -91,7 +96,7 @@ body{
   line-height: 22px;
   border-bottom: solid 1px #333333;
   padding-bottom: 10px;
-  margin-left: -10px;
+  margin-left:-20px;
   margin-bottom: 10px;
 
 }
@@ -127,6 +132,7 @@ ul#projectlist li {
     background-color: #1E1E1E;
     width: 40%;
     min-width: 150px;
+    margin-left: -50px;
     
 
 }
@@ -148,7 +154,8 @@ ul#projectlist li {
 
 .footer {
     clear: both;
-background-color: #007ACC;
+background-color:red;
+position: absolute;
 
 height: 21px;
 }
