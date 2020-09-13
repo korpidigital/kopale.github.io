@@ -25,6 +25,7 @@ const outputbox = document.getElementById("outputbox");
 const runbtn = document.getElementById("runbtn");
 const rownum = document.getElementById("rownum");
 const asideProject = document.getElementById("asideProject");
+const main = document.getElementById("mainId");
 
 //what tab are we on?
 let tab = "tab1";
@@ -57,18 +58,19 @@ function menuopenFlex(){
 function asideHeight(mode){
     let screenW = window.innerWidth;
     if (screenW < 600 && mode == "open") {
-        return "515px"
+        return '70vh';
     }
+
     else{
-        return "595px"
+        return '86vh';
     }
 }
 
 //toggle height depending menutab position
 let menuMode = "close";
 window.onresize = function(){
-    aside.style.height = asideHeight(menuMode);
-    asideProject.height = asideHeight(menuMode);
+    aside.style.minHeight = asideHeight(menuMode);
+    asideProject.minHeight = asideHeight(menuMode);
    
 }
 
@@ -78,6 +80,8 @@ fileico.addEventListener("click", toggle());
 function toggle(){
     return function(){    
         //OPEN
+        //min-height 86 max-height 70 when open
+      
         if (menucount % 2 != 0  ) {
             menuMode = "open";
             menuopen.style.display = 'flex';
@@ -85,8 +89,9 @@ function toggle(){
             //border
             fileico.style.borderLeft = 'solid 4px #D4D4D4';
             //minus top menu when small screen
-            aside.style.height = asideHeight(menuMode);
-            asideProject.style.height = asideHeight(menuMode);
+            aside.style.minHeight = asideHeight(menuMode);
+            asideProject.style.minHeight = asideHeight(menuMode);
+        
         }
         
         //CLOSE
@@ -95,8 +100,9 @@ function toggle(){
             menuopen.style.display = 'none';
             //border
             fileico.style.borderLeft = 'solid 4px #333333';
-            aside.style.height = asideHeight(menuMode);
-            asideProject.style.height = asideHeight(menuMode);
+            aside.style.minHeight = asideHeight(menuMode);
+            asideProject.style.minHeight = asideHeight(menuMode);
+            
 
         }  
     menucount ++;    
