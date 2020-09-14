@@ -87,11 +87,11 @@
      .rownum{font-size: 6px;}
      #output{font-size: 6px;}
   }
-  @media only screen and (max-height: 363px) {
+  /* @media only screen and (max-height: 363px) {
     .codetxt{font-size: 4px;}
      .rownum{font-size: 4px;}
      #output{font-size: 4px;}
   }
   @media only screen and (max-height: 306px) {
-    /* remove padding */
-  }
+    
+  } */
