@@ -59,6 +59,12 @@
   }
 
   /* height //////////////////////////////////////////////////////////////////////////////*/
+/* zooming out */
+
+@media only screen and (min-height: 772px) {
+  .menuopen{min-height: 91vh;}
+}
+  /* zooming in */
   @media only screen and (max-height: 669px) {
     .codetxt{font-size: 14px;}
      .rownum{font-size: 14px;}
