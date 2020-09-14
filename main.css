@@ -10,7 +10,7 @@ html, body{
 }
 .main{
   width: 100vw;
-  height: 96vh;
+ height: 96vh;
   
 }
 
@@ -59,7 +59,7 @@ html, body{
   display: flex;
   flex-direction: column;
   background-color:#1E1E1E;
-  /* height: 88vh; */
+  
   
 
   

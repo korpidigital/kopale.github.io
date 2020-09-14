@@ -1,4 +1,4 @@
-
+/* width////////////////////////////////////////////////////////////////////////////////// */
 @media only screen and (max-width: 600px) {
     /* mobile */
      
@@ -24,9 +24,9 @@
    @media only screen and (min-width: 600px) {
  
      .menuopen {padding-left: 10px;}
-     .menuopen {max-width: 220px;}
+     .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     .menuopen{min-height: 86vh;}
+     .menuopen{min-height: 89vh;}
      #mesvg{width: 60%;}
      #me{display: none;}
      .codetxt{font-size: 14px;}
@@ -44,11 +44,11 @@
    @media only screen and (min-width: 1100px) {
      /* For desktop: */
     
-     .menuopen {max-width: 220px;}
+     .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     .menuopen{min-height: 86vh;}
+     .menuopen{min-height: 89vh;}
      #me{display: block;}
-     #mesvg{width: 100%;}
+     #mesvg{width: 75%;}
      .codetxt{font-size: 16px;}
      .rownum{font-size: 16px;}
      #output{font-size: 16px;}
@@ -56,6 +56,34 @@
      #smallrunico{padding-top: 42px;}
      ul#projectlist li{display: block}
      
-   
-      
+  }
+
+  /* height //////////////////////////////////////////////////////////////////////////////*/
+  @media only screen and (max-height: 669px) {
+    .codetxt{font-size: 14px;}
+     .rownum{font-size: 14px;}
+     #output{font-size: 14px;}
+  }
+  @media only screen and (max-height: 583px) {
+    .codetxt{font-size: 12px;}
+     .rownum{font-size: 12px;}
+     #output{font-size: 12px;}
+  }
+  @media only screen and (max-height: 539px) {
+    .codetxt{font-size: 10px;}
+     .rownum{font-size: 10px;}
+     #output{font-size: 10px;}
+  }
+  @media only screen and (max-height: 466px) {
+    .codetxt{font-size: 6px;}
+     .rownum{font-size: 6px;}
+     #output{font-size: 6px;}
+  }
+  @media only screen and (max-height: 363px) {
+    .codetxt{font-size: 4px;}
+     .rownum{font-size: 4px;}
+     #output{font-size: 4px;}
+  }
+  @media only screen and (max-height: 306px) {
+    /* remove padding */
   }

@@ -75,7 +75,8 @@ window.onresize = function(){
         main.style.height = "96vh";
     }
 }
-
+let screenH = window.innerHeight;
+console.log(screenH);
    
 
 
