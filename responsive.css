@@ -24,6 +24,7 @@
    @media only screen and (min-width: 600px) {
  
      .menuopen {padding-left: 10px;}
+     .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
      .menuopen{min-height: 89vh;}
@@ -44,6 +45,7 @@
    @media only screen and (min-width: 1100px) {
      /* For desktop: */
     
+     .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
      .menuopen{min-height: 89vh;}
