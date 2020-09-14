@@ -18,6 +18,7 @@
      #explorertxt{margin-left: 10px;}
      #projectstxt{margin-left: 10px;}
      
+     
    }
    /* medium - disable image */
    @media only screen and (min-width: 600px) {
@@ -34,6 +35,7 @@
      #outputtxt2{padding-top: 41px;}
      #smallrunico{padding-top: 33px;}
      ul#projectlist li{display: block}
+     
      
      
       
@@ -53,6 +55,7 @@
      #outputtxt2{padding-top: 48px;}
      #smallrunico{padding-top: 42px;}
      ul#projectlist li{display: block}
+     
    
       
   }

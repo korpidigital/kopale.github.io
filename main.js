@@ -54,25 +54,30 @@ function menuopenFlex(){
     }
 
 }
-
-function asideHeight(mode){
-    let screenW = window.innerWidth;
-    if (screenW < 600 && mode == "open") {
-        return '70vh';
-    }
-
-    else{
-        return '86vh';
-    }
-}
-
-//toggle height depending menutab position
-let menuMode = "close";
 window.onresize = function(){
-    aside.style.minHeight = asideHeight(menuMode);
-    asideProject.minHeight = asideHeight(menuMode);
-   
+    //main height depending on project box rows
+    let screenW = window.innerWidth;
+    if (tab == "tab2") {
+        if (screenW > 913 && screenW < 1218) {
+            main.style.height = "130vh";
+        }
+        else if (screenW > 650 && screenW < 913) {
+            main.style.height = "170vh";
+        }
+        else if (screenW < 650) {
+            main.style.height = "320vh";
+        }
+        else{
+            main.style.height = "96vh";
+        }
+    }
+    else{
+        main.style.height = "96vh";
+    }
 }
+
+   
+
 
 //FILE ICON CLICK OPEN MENU
 let menucount = 1;
@@ -80,17 +85,15 @@ fileico.addEventListener("click", toggle());
 function toggle(){
     return function(){    
         //OPEN
-        //min-height 86 max-height 70 when open
-      
+        
         if (menucount % 2 != 0  ) {
             menuMode = "open";
             menuopen.style.display = 'flex';
             menuopen.style.marginRight = "-37px" 
             //border
             fileico.style.borderLeft = 'solid 4px #D4D4D4';
-            //minus top menu when small screen
-            aside.style.minHeight = asideHeight(menuMode);
-            asideProject.style.minHeight = asideHeight(menuMode);
+            
+             
         
         }
         
@@ -100,18 +103,19 @@ function toggle(){
             menuopen.style.display = 'none';
             //border
             fileico.style.borderLeft = 'solid 4px #333333';
-            aside.style.minHeight = asideHeight(menuMode);
-            asideProject.style.minHeight = asideHeight(menuMode);
+            
+            
+         
             
 
         }  
-    menucount ++;    
+    menucount ++;   
+    console.log(menucount);
 }}
 //RUN ICON CLICK CHANGE TXT
 runico.addEventListener("click", runcode());
 function runcode(){
-    return function(){
-            
+    return function(){        
             outputbox.innerHTML = runOutput;
             //button to gray
             runbtn.style.fill = '#D4D4D4 ';
@@ -121,6 +125,7 @@ function runcode(){
 
 
 //tab click
+
 tab2.addEventListener("click", clickTab2());
 function clickTab2(){
     return function(){
@@ -129,8 +134,19 @@ function clickTab2(){
         tab1.style.backgroundColor ="#2D2D2D";
         aside.style.display = "none";
         asideProject.style.display = "block";
-        
-        
+
+        let screenW = window.innerWidth;
+        //grow mwnu bar at screen width: 1218, 913, 650
+        if (screenW > 913 && screenW < 1218) {
+            main.style.height = "130vh";
+        }
+        else if (screenW > 650 && screenW < 913) {
+            main.style.height = "170vh";
+        }
+        else if (screenW < 650) {
+            main.style.height = "320vh";
+        }
+        //do also on windows resize
 
 }}
 tab1.addEventListener("click", clickTab1());
@@ -141,6 +157,7 @@ function clickTab1(){
         tab1.style.backgroundColor ="#1E1E1E";
         aside.style.display = "block";
         asideProject.style.display = "none";
+        main.style.height = "96vh";
 
             
 }}
