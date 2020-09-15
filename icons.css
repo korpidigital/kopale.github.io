@@ -41,3 +41,18 @@
     top: 10px;
     
   }
+  .footerIcos{
+    margin-left: auto;
+    margin-right: auto 
+  }
+  .footerIco{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .youtubeIco{
+    width: 23px;
+    height: 19px;
+  }
+  .githubIco{
+    width: 20px;
+  }

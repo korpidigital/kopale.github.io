@@ -76,9 +76,15 @@
     .aside , .asideProject{min-height: 88vh;}
   }
   @media only screen and (min-height: 1005px) {
-    .aside , .asideProject{min-height: 89.5vh;}
+    .aside , .asideProject{min-height: 90vh;}
   }
   @media only screen and (min-height: 1165px) {
+    .aside , .asideProject{min-height: 91vh;}
+  }
+  @media only screen and (min-height: 1398px) {
+    .aside , .asideProject{min-height: 92.5vh;}
+  }
+  @media only screen and (min-height: 1748px) {
     .aside , .asideProject{min-height: 100vh;}
   }
 
