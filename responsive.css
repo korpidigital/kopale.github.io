@@ -36,19 +36,13 @@
      #outputtxt2{padding-top: 41px;}
      #smallrunico{padding-top: 33px;}
      ul#projectlist li{display: block}
-     
-     
-     
-      
    }
    
    @media only screen and (min-width: 1100px) {
      /* For desktop: */
-    
      .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     
      #me{display: block;}
      #mesvg{width: 75%;}
      .codetxt{font-size: 16px;}
@@ -57,8 +51,20 @@
      #outputtxt2{padding-top: 48px;}
      #smallrunico{padding-top: 42px;}
      ul#projectlist li{display: block}
-     
   }
+
+  /* @media only screen and (max-width: 1536px) {
+     .output{width: 95vw;}
+  }
+  @media only screen and (max-width: 1184px) {
+    .output{width: 94vw;}
+  }
+  @media only screen and (max-width: 960px) {
+    .output{width: 92vw;}
+  }
+  @media only screen and (max-width: 672px) {
+    .output{width: 90vw;}
+  } */
 
   /* height //////////////////////////////////////////////////////////////////////////////*/
 /* zooming out */

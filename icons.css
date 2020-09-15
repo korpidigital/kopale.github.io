@@ -42,7 +42,7 @@
     
   }
   .footerIcos{
-    width: 65px;
+    width: 70px;
     /* background-color: red; */
     margin-left: auto;
     margin-right: auto 
@@ -54,9 +54,9 @@
     margin-right: 5px;
   }
   .youtubeIco{
-    width: 23px;
-    height: 19px;
+    width: 20px;
+    height: 17px;
   }
   .githubIco{
-    width: 20px;
+    width: 18px;
   }

@@ -13,6 +13,11 @@ html, body{
  height: 100%;
   
 }
+.placeholder{
+  height: 100px;
+  background-color: red;
+  width: 100%;
+}
 
 .flex-cont {
   display: flex;
@@ -170,6 +175,6 @@ padding-right: 60px;
 padding-top: 1px;
 display: flex;
 flex-direction: row;
-
+overflow: hidden;
 }
 

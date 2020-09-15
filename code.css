@@ -11,6 +11,10 @@
     padding-right: 10px;
     
   }
+  /* .code{
+    height: 385px;
+     overflow: hidden; 
+  } */
 
  
 
@@ -19,7 +23,7 @@
     font-family: 'Segoe UI';
     color: #C2C2C2;
     padding-bottom: 30px;
-    
+    width: 89vw;
     
   }
  
@@ -101,9 +105,10 @@
   }
   .output {
     margin-top: 10px;
-    padding-left: 10px;
     background-color: #1E1E1E;
     border-top: solid 1px #707070;
+    /* width: 96vw; */
+
     
 
     
