@@ -41,22 +41,20 @@
     top: 10px;
     
   }
-  .footerIcos{
-    width: 70px;
-    /* background-color: red; */
-    margin-left: auto;
-    margin-right: auto 
-    
-    
-  }
+
+  
   .footerIco{
-    margin-left: 5px;
-    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    right: -30px;
   }
   .youtubeIco{
     width: 20px;
     height: 17px;
+    
   }
   .githubIco{
     width: 18px;
+    
   }

@@ -11,13 +11,10 @@ html, body{
 .main{
   width: 100vw;
  height: 100%;
+ 
   
 }
-.placeholder{
-  height: 100px;
-  background-color: red;
-  width: 100%;
-}
+
 
 .flex-cont {
   display: flex;
@@ -68,6 +65,7 @@ html, body{
   flex-direction: column;
   background-color:#1E1E1E;
   min-height: 85vh;
+  width: 100%;
 
 }
 
@@ -173,8 +171,11 @@ position: relative;
 left: -60px;
 padding-right: 60px;
 padding-top: 1px;
-display: flex;
-flex-direction: row;
 overflow: hidden;
+
+display: flex; /* establish flex container */
+flex-direction: row; /* make main axis horizontal (default value) */
+justify-content: center; /* center items horizontally, in this case */
+align-items: center; /* center items vertically, in this case */
 }
 

@@ -53,25 +53,10 @@
      ul#projectlist li{display: block}
   }
 
-  /* @media only screen and (max-width: 1536px) {
-     .output{width: 95vw;}
-  }
-  @media only screen and (max-width: 1184px) {
-    .output{width: 94vw;}
-  }
-  @media only screen and (max-width: 960px) {
-    .output{width: 92vw;}
-  }
-  @media only screen and (max-width: 672px) {
-    .output{width: 90vw;}
-  } */
 
   /* height //////////////////////////////////////////////////////////////////////////////*/
 /* zooming out */
 
-/* @media only screen and (min-height: 641px) {
-  .aside{min-height: 84vh;}
-} */
   @media only screen and (min-height: 699px) {
     .aside , .asideProject{min-height: 85vh;}
   }
