@@ -42,8 +42,12 @@
     
   }
   .footerIcos{
+    width: 65px;
+    /* background-color: red; */
     margin-left: auto;
     margin-right: auto 
+    
+    
   }
   .footerIco{
     margin-left: 5px;
