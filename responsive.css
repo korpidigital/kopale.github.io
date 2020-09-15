@@ -27,7 +27,7 @@
      .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     .menuopen{min-height: 89vh;}
+     
      #mesvg{width: 60%;}
      #me{display: none;}
      .codetxt{font-size: 14px;}
@@ -48,7 +48,7 @@
      .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     .menuopen{min-height: 89vh;}
+     
      #me{display: block;}
      #mesvg{width: 75%;}
      .codetxt{font-size: 16px;}
@@ -63,35 +63,22 @@
   /* height //////////////////////////////////////////////////////////////////////////////*/
 /* zooming out */
 
-@media only screen and (min-height: 772px) {
-  .menuopen{min-height: 91vh;}
-}
-  /* zooming in */
-  @media only screen and (max-height: 669px) {
-    .codetxt{font-size: 14px;}
-     .rownum{font-size: 14px;}
-     #output{font-size: 14px;}
+/* @media only screen and (min-height: 641px) {
+  .aside{min-height: 84vh;}
+} */
+  @media only screen and (min-height: 699px) {
+    .aside , .asideProject{min-height: 85vh;}
   }
-  @media only screen and (max-height: 583px) {
-    .codetxt{font-size: 12px;}
-     .rownum{font-size: 12px;}
-     #output{font-size: 12px;}
+  @media only screen and (min-height: 772px) {
+    .aside , .asideProject{min-height: 87vh;}
   }
-  @media only screen and (max-height: 539px) {
-    .codetxt{font-size: 10px;}
-     .rownum{font-size: 10px;}
-     #output{font-size: 10px;}
+  @media only screen and (min-height: 874px) {
+    .aside , .asideProject{min-height: 88vh;}
   }
-  @media only screen and (max-height: 466px) {
-    .codetxt{font-size: 6px;}
-     .rownum{font-size: 6px;}
-     #output{font-size: 6px;}
+  @media only screen and (min-height: 1005px) {
+    .aside , .asideProject{min-height: 89.5vh;}
   }
-  /* @media only screen and (max-height: 363px) {
-    .codetxt{font-size: 4px;}
-     .rownum{font-size: 4px;}
-     #output{font-size: 4px;}
+  @media only screen and (min-height: 1165px) {
+    .aside , .asideProject{min-height: 100vh;}
   }
-  @media only screen and (max-height: 306px) {
-    
-  } */
+

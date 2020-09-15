@@ -54,27 +54,27 @@ function menuopenFlex(){
     }
 
 }
-window.onresize = function(){
-    //main height depending on project box rows
-    let screenW = window.innerWidth;
-    if (tab == "tab2") {
-        if (screenW > 913 && screenW < 1218) {
-            main.style.height = "130vh";
-        }
-        else if (screenW > 650 && screenW < 913) {
-            main.style.height = "170vh";
-        }
-        else if (screenW < 650) {
-            main.style.height = "320vh";
-        }
-        else{
-            main.style.height = "96vh";
-        }
-    }
-    else{
-        main.style.height = "96vh";
-    }
-}
+// window.onresize = function(){
+//     //main height depending on project box rows
+//     let screenW = window.innerWidth;
+//     if (tab == "tab2") {
+//         if (screenW > 913 && screenW < 1218) {
+//             main.style.height = "130vh";
+//         }
+//         else if (screenW > 650 && screenW < 913) {
+//             main.style.height = "170vh";
+//         }
+//         else if (screenW < 650) {
+//             main.style.height = "320vh";
+//         }
+//         else{
+//             main.style.height = "96vh";
+//         }
+//     }
+//     else{
+//         main.style.height = "96vh";
+//     }
+// }
 let screenH = window.innerHeight;
 console.log(screenH);
    
@@ -137,17 +137,17 @@ function clickTab2(){
         asideProject.style.display = "block";
 
         let screenW = window.innerWidth;
-        //grow mwnu bar at screen width: 1218, 913, 650
-        if (screenW > 913 && screenW < 1218) {
-            main.style.height = "130vh";
-        }
-        else if (screenW > 650 && screenW < 913) {
-            main.style.height = "170vh";
-        }
-        else if (screenW < 650) {
-            main.style.height = "320vh";
-        }
-        //do also on windows resize
+        // //grow mwnu bar at screen width: 1218, 913, 650
+        // if (screenW > 913 && screenW < 1218) {
+        //     main.style.height = "130vh";
+        // }
+        // else if (screenW > 650 && screenW < 913) {
+        //     main.style.height = "170vh";
+        // }
+        // else if (screenW < 650) {
+        //     main.style.height = "320vh";
+        // }
+        // //do also on windows resize
 
 }}
 tab1.addEventListener("click", clickTab1());
@@ -158,7 +158,7 @@ function clickTab1(){
         tab1.style.backgroundColor ="#1E1E1E";
         aside.style.display = "block";
         asideProject.style.display = "none";
-        main.style.height = "96vh";
+        // main.style.height = "96vh";
 
             
 }}
