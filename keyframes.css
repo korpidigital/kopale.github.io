@@ -1,0 +1,44 @@
+@keyframes createBox {
+    0% {
+      transform: scale(0);
+    }
+
+    100%{
+      transform: scale(1);
+    }
+  }
+@keyframes growBox {
+    0% {
+      width: 274px;
+      min-height: 250px;
+      text-align: left;
+    }
+
+    100% {
+        width: 100%;
+        min-height: 80vh;
+        text-align: center;
+    }
+  }
+@keyframes animateImg{
+    0% {
+        background-image: url('me2.svg');
+      }
+      20% {
+        background-image: url('me3.svg');
+      }
+
+  }
+.me{
+    /* border: red 2px solid; */
+    height: 80vh;
+    width: 350px;
+    position: absolute;
+    right: 100px;
+    top:110px;
+    background-image: url("me2.svg");
+    background-repeat: no-repeat;
+    background-size: 350px, 600px;
+    animation: animateImg .4s infinite;
+    
+}

@@ -48,6 +48,7 @@
     padding-right: 10px;
     position: relative;
     right: -30px;
+    cursor: pointer;
   }
   .youtubeIco{
     width: 20px;
@@ -56,5 +57,10 @@
   }
   .githubIco{
     width: 18px;
+    height: 17px;
+    
+  }
+  .rgIco{
+    height: 15px;
     
   }

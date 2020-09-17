@@ -26,6 +26,8 @@ const runbtn = document.getElementById("runbtn");
 const rownum = document.getElementById("rownum");
 const asideProject = document.getElementById("asideProject");
 const main = document.getElementById("mainId");
+const modal = document.getElementById("myModal");
+
 
 //what tab are we on?
 let tab = "tab1";
@@ -41,24 +43,10 @@ function getNumRow(){
 }
 getNumRow();
 
-function menuopenFlex(){
-    let screenW = window.innerWidth;
-    if (screenW < 600 && mode == "open") {
-        return "column"
-    }
-    else if(screenW > 600 && mode == "open"){
-        return "column"
-    }
-    else{
-        return
-    }
-
-}
 
 let screenW = window.innerWidth;
 console.log(screenW);
    
-
 
 //FILE ICON CLICK OPEN MENU
 let menucount = 1;
@@ -73,9 +61,7 @@ function toggle(){
             menuopen.style.marginRight = "-37px" 
             //border
             fileico.style.borderLeft = 'solid 4px #D4D4D4';
-            
-             
-        
+
         }
         
         //CLOSE
@@ -84,10 +70,6 @@ function toggle(){
             menuopen.style.display = 'none';
             //border
             fileico.style.borderLeft = 'solid 4px #333333';
-            
-            
-         
-            
 
         }  
     menucount ++;   
@@ -126,33 +108,38 @@ function clickTab1(){
         tab1.style.backgroundColor ="#1E1E1E";
         aside.style.display = "block";
         asideProject.style.display = "none";
-        // main.style.height = "96vh";
+     
 
             
 }}
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
 //event listner 
-document.querySelectorAll('.projectModal').forEach(item => {
+document.querySelectorAll('.project').forEach(item => {
     item.addEventListener('click', event => {
-        modal.style.display = "block";
+        let clickId = item.id;
+        document.querySelectorAll('.project').forEach(item => {
+            if (item.id != clickId) {
+                
+                
+                item.style.display ="none"; 
+                
+            }
+        })
+
+        
+        item.style.animation = "growBox .25s forwards";
+
+        item.style.backgroundImage = "none";
+       
+
     })
   })
+// document.querySelectorAll('.projectObj').forEach(item => {
+   
+//     item.addEventListener('click', event => {
 
+//         item.style.backgroundColor = "rgb(9,71,113)";
+//     })
+//   })
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}

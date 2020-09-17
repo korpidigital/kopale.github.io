@@ -5,7 +5,6 @@
      .menuopen{flex-direction: row;}
      .menuopen{min-height: 100px;}
      .mobile{flex-direction: column;}
-     #me{display: none;}
      .codetxt{font-size: 11px;}
      .rownum{font-size: 11px;}
      #outputtxt2{padding-top: 34px;}
@@ -28,8 +27,8 @@
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
      
-     #mesvg{width: 60%;}
-     #me{display: none;}
+     /* #mesvg,#mesvg2{width: 60%;} */
+     /* .me{display: none;} */
      .codetxt{font-size: 14px;}
      .rownum{font-size: 14px;}
      #output{font-size: 14px;}
@@ -37,14 +36,18 @@
      #smallrunico{padding-top: 33px;}
      ul#projectlist li{display: block}
    }
+   @media only screen and (max-width: 960px) {
+    .me{display: none;}
+   }
+
    
    @media only screen and (min-width: 1100px) {
      /* For desktop: */
      .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     #me{display: block;}
-     #mesvg{width: 75%;}
+     /* .me{display: block;} */
+     /* #mesvg,#mesvg2{width: 75%;} */
      .codetxt{font-size: 16px;}
      .rownum{font-size: 16px;}
      #output{font-size: 16px;}

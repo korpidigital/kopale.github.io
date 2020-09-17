@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "SourceCodePro-Regular";
+  src: url("./fonts/SourceCodePro-Regular.ttf") format("truetype");
+}
+
+
 .projectContainer{
     display: flex;
     flex-wrap: wrap;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 30px;
+    margin: auto;
+    justify-content: center; /* center items horizontally, in this case */
+    align-items: center; /* center items vertically, in this case */
     
 }
 
@@ -13,50 +22,37 @@
     height: 250px;
     width: 274px;
     margin: 2px ;  
-    transition: transform .2s; /* Animation */
+    /* transition: transform .2s;  */
+    
+    animation: createBox .25s;
 }
 .project:hover {
-    transform: scale(1.05); 
-  }
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
+    /* transform: scale(1.05);  */
     cursor: pointer;
-    
-  }
+}
+
+
+.project {
+  font-size: 45px;
+  font-weight: 1000;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: seashell;
+  -webkit-text-stroke: black 2px;
+  padding-left: 5px;
+}
+.project.project1{
+  background-image: url('svg/ping-pong.svg');
+}
+.project.project2{
+  background-image: url('svg/ping-pong2.svg');
+}
+.project.project3{
+  background-image: url('svg/recycle-can.svg');
+}
+.project.project4{
+  background-image: url('');
+}
+
+
+
 

@@ -90,12 +90,7 @@
   .nospace{
     word-spacing:-7px
   }
-  #me{
-    position: absolute;
-    right: 0px;
-    top:70px;
-    
-  }
+ 
   .outtitle{
     font-weight: 700;
     border-bottom: solid 1px #C2C2C2;
