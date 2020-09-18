@@ -1,4 +1,4 @@
-//output
+//output text
 const runOutput = '<div id="outputtxt"><span class="outtitle">OUTPUT</span><br><br>Hello World! I am Tuomas Korpi from Kuopio, Finland.<br>'  
 +'This website showcases my abilities as web/software developer '
 +'and IoT engineer.<br>Open menu (<span ><svg id="smallfileBottom" xmlns="http://www.w3.org/2000/svg" width="23.697" height="29.483" viewBox="0 0 23.697 29.483">'
@@ -27,11 +27,14 @@ const rownum = document.getElementById("rownum");
 const asideProject = document.getElementById("asideProject");
 const main = document.getElementById("mainId");
 const modal = document.getElementById("myModal");
+const minimize = document.querySelectorAll('.minimize');
 
 
 //what tab are we on?
 let tab = "tab1";
 asideProject.style.display = "none";
+//what project box is selected
+let selectedBox = "";
 
 //print row numbers
 function getNumRow(){
@@ -43,11 +46,24 @@ function getNumRow(){
 }
 getNumRow();
 
-
 let screenW = window.innerWidth;
 console.log(screenW);
-   
 
+//return project boxes all to original size
+function returnBoxes(){
+    document.querySelectorAll('.project').forEach(item => {
+         console.log("iam block");   
+        item.style.display ="block"; 
+        selectedBox.style.animation = "smallBox 0s forwards";
+        //images are named same as project pox id
+        selectedBox.style.backgroundImage = `url('svg/${selectedBox.id}.svg')`;
+        //hide close btn 
+        selectedBox.children[0].style.display = "none";
+        selectedBox.children[1].style.display = "none";
+        
+    })
+}
+   
 //FILE ICON CLICK OPEN MENU
 let menucount = 1;
 fileico.addEventListener("click", toggle());
@@ -73,7 +89,7 @@ function toggle(){
 
         }  
     menucount ++;   
-    console.log(menucount);
+    
 }}
 //RUN ICON CLICK CHANGE TXT
 runico.addEventListener("click", runcode());
@@ -84,8 +100,6 @@ function runcode(){
             runbtn.style.fill = '#D4D4D4 ';
      
 }}
-
-
 
 //tab click
 
@@ -108,38 +122,40 @@ function clickTab1(){
         tab1.style.backgroundColor ="#1E1E1E";
         aside.style.display = "block";
         asideProject.style.display = "none";
-     
 
-            
+        //return boxes
+        returnBoxes();       
 }}
 
 
-//event listner 
+//event listner for project box click. show only selected box and make it big.
 document.querySelectorAll('.project').forEach(item => {
     item.addEventListener('click', event => {
         let clickId = item.id;
+        selectedBox = item;
         document.querySelectorAll('.project').forEach(item => {
             if (item.id != clickId) {
-                
-                
                 item.style.display ="none"; 
-                
+                console.log("iam none");
             }
         })
+        selectedBox.style.animation = "growBox .25s forwards";
+        selectedBox.style.backgroundImage = "none";
 
-        
-        item.style.animation = "growBox .25s forwards";
-
-        item.style.backgroundImage = "none";
-       
-
-    })
-  })
-// document.querySelectorAll('.projectObj').forEach(item => {
+        //close btn visible
+        selectedBox.children[0].style.display = "block";
+        selectedBox.children[1].style.display = "block";
    
-//     item.addEventListener('click', event => {
+    })
+})
 
-//         item.style.backgroundColor = "rgb(9,71,113)";
-//     })
-//   })
+
+//close btn
+document.querySelectorAll('.minimize').forEach(item => {   
+    item.addEventListener('click', event => {
+       returnBoxes();
+       event.stopPropagation();
+      
+    })
+})
 

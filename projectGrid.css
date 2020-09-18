@@ -22,12 +22,9 @@
     height: 250px;
     width: 274px;
     margin: 2px ;  
-    /* transition: transform .2s;  */
-    
     animation: createBox .25s;
 }
 .project:hover {
-    /* transform: scale(1.05);  */
     cursor: pointer;
 }
 
@@ -41,18 +38,33 @@
   padding-left: 5px;
 }
 .project.project1{
-  background-image: url('svg/ping-pong.svg');
+  background-image: url('svg/p1.svg');
 }
 .project.project2{
-  background-image: url('svg/ping-pong2.svg');
+  background-image: url('svg/p2.svg');
 }
 .project.project3{
-  background-image: url('svg/recycle-can.svg');
+  background-image: url('svg/p3.svg');
 }
 .project.project4{
   background-image: url('');
 }
+.minimize{
+ float: left;
+ width: 49px;
+ height: 49px;
+ background-image: url('svg/minimize.svg');
+ display: none;
+ margin-top: 4px;
 
+}
+.projectPage{
+  width: 85%;
+  min-height: 75%;
+  background-color: rgb(250, 250, 250);
+  margin: auto;
+  display: none;
+}
 
 
 

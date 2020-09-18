@@ -1,23 +1,29 @@
-@keyframes createBox {
-    0% {
-      transform: scale(0);
-    }
 
-    100%{
-      transform: scale(1);
-    }
-  }
 @keyframes growBox {
     0% {
       width: 274px;
-      min-height: 250px;
+      height: 250px;
       text-align: left;
     }
 
     100% {
         width: 100%;
-        min-height: 80vh;
+        min-height: 130vh;
         text-align: center;
+    }
+  }
+@keyframes smallBox {
+    0% {
+        width: 100%;
+        min-height: 80vh;
+        text-align: center;  
+    }
+
+    100% {
+            
+        width: 274px;
+        height: 250px;
+        text-align: left;
     }
   }
 @keyframes animateImg{
