@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "SourceCodePro-Regular";
-  src: url("./fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-family: "Impact";
+  src: url("./fonts/impact.ttf") format("truetype");
 }
 
 
@@ -32,7 +32,7 @@
 .project {
   font-size: 45px;
   font-weight: 1000;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact;
   color: seashell;
   -webkit-text-stroke: black 2px;
   padding-left: 5px;

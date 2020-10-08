@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("./fonts/SEGOEUI.TTF") format("truetype");
+}
+
 html, body{
   margin-top: 0;
   margin-left: 0;
@@ -45,7 +50,7 @@ html, body{
   width: 100%;
   background-color: #262525;
   display: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI';
   color: #D4D4D4;
   padding-top: 10px;
 }
