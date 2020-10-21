@@ -173,7 +173,40 @@
             <div id="p4" class="project project4 ">
                 <div class="minimize"></div>
                 ANDROID DATASET RECORDER
-                <div class="projectPage"></div>
+                <div class="projectPage">
+                    <p>To train accurate machine learning model a large variety of voice samples from different people is required. Each audio clip needs to be in separate “.wav”-file in the directory with corresponding command as directory name. Splitting words out of long audio files and categorizing them after recording is time consuming task.</p>
+                    <p>Mobile application is developed to do the file classification at the same time with recording. With the app it is easy and fast to go around and ask people to say the commands. Dataset recording app is build for Android platform using Android Studio with Java. </p>
+                    <p>Application functionality explained:</p>
+                    <ol>
+                        <li>
+                            	Select a word 
+                        </li>
+                        <li>
+                            	Press record 
+                        </li>
+                        <li>
+                            	Say the word 
+                        </li>
+                        <li>
+                            	Press stop 
+                        </li>
+                        <li>
+                            	Audio is saved to [SD CARD root] / Audio / [word]. Audio files go to directory with corresponding word as name 
+                        </li>
+                        <li>
+                            	You can play it back to see if its good, if not delete 
+                        </li>
+                        <li>
+                            	When you want to transfer files from phone to PC press “zip and delete all” button. It makes zip file (PATH: [SD CARD root] / zippedAudio) with all recorded audio in right folders and deletes original audio files, so you can continue recording and there is no duplicates when you make zip file again. 
+                        </li>
+                        <li>
+                            	Open Google Drive app on phone and add zip file there
+                        </li>
+                    </ol>
+                    <img src="img/datasetrecorder.jpg" width="200px" height="300px" >
+                    <p>Source code for the app is available at: https://github.com/korpidigital/datasetRecorder</p>
+
+                </div>
             </div>
             <div id="p5" class="project project5 ">
                 <div class="minimize"></div>

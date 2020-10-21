@@ -2,6 +2,10 @@
   font-family: "Impact";
   src: url("./fonts/impact.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Segoe UI";
+  src: url("./fonts/SEGOEUI.TTF") format("truetype");
+}
 
 
 .projectContainer{
@@ -15,6 +19,15 @@
     align-items: center; /* center items vertically, in this case */
     
 }
+.projectPage{
+  font-family: 'Segoe UI';
+  display: none;
+  font-size: 14px;
+  -webkit-text-stroke: black 0px;
+  padding: 40px;
+  text-align: left;
+
+}
 
 .project{
     border: #D4D4D4 solid 1px;
@@ -23,6 +36,8 @@
     width: 274px;
     margin: 0px ;  
     animation: createBox .25s;
+    display: flex;
+    height: 100%;
     
     
 }

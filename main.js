@@ -16,7 +16,6 @@ const runOutput = '<div id="outputtxt"><span class="outtitle">OUTPUT</span><br><
 const menuopen = document.getElementById("menuopen");
 const menubar = document.getElementById("menubar");
 const footer = document.getElementById("footer");
-const footerIcos = document.querySelectorAll("footerIcos");
 const header = document.getElementById("header");
 const fileico = document.getElementById("fileico");
 const linkico = document.getElementById("linkico");
@@ -32,11 +31,15 @@ const rownum = document.getElementById("rownum");
 const asideProject = document.getElementById("asideProject");
 const main = document.getElementById("mainId");
 const modal = document.getElementById("myModal");
+
+const footerIcos = document.querySelectorAll("footerIcos");
 const minimize = document.querySelectorAll('.minimize');
 const mobile = document.querySelectorAll('.mobile');
 const githubIco = document.querySelectorAll('.githubIco');
 const youtubeIco = document.querySelectorAll('.youtubeIco');
+const projectPage = document.querySelectorAll('.projectPage');
 const body = document.body;
+
 
 
 //what tab are we on?
@@ -64,10 +67,10 @@ function growFooterIcos(){
         
 
         if (screenW < 600) {
-            item.style.width = "40px";
-            item.style.height = "40px";
+            item.style.width = "50px";
+            item.style.height = "50px";
             footer.style.flexDirection = "column";
-            item.style.marginTop = "40px";
+            item.style.marginTop = "5vh";
            
             
             
@@ -77,7 +80,7 @@ function growFooterIcos(){
             item.style.width = "60px";
             item.style.height = "60px";
             footer.style.flexDirection = "row";
-            item.style.marginRight = "80px";
+            item.style.marginRight = "10vw";
         }
         
         
