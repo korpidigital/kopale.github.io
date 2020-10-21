@@ -23,6 +23,8 @@
     width: 274px;
     margin: 2px ;  
     animation: createBox .25s;
+    
+    
 }
 .project:hover {
     cursor: pointer;
@@ -47,24 +49,15 @@
   background-image: url('svg/p3.svg');
 }
 .project.project4{
-  background-image: url('');
+  background-image: url('svg/p4.svg');
 }
-.minimize{
- float: left;
- width: 49px;
- height: 49px;
- background-image: url('svg/minimize.svg');
- display: none;
- margin-top: 4px;
+.project.project5{
+  background-image: url('svg/p5.svg');
 
 }
-.projectPage{
-  width: 85%;
-  min-height: 75%;
-  background-color: rgb(250, 250, 250);
-  margin: auto;
-  display: none;
-}
+
+
+
 
 
 

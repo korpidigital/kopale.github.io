@@ -6,16 +6,22 @@
      .menuopen{min-height: 100px;}
      .mobile{flex-direction: column;}
      .codetxt{font-size: 11px;}
-     .rownum{font-size: 11px;}
+     .rownum{font-size: 11px;} 
+     #output{font-size: 11px;}
+     /* #output{height: 400px;} */
      #outputtxt2{padding-top: 34px;}
      #smallrunico{padding-top: 25px;}
-     #output{font-size: 11px;}
-     ul#projectlist li{display: inline;}
-     #projectlist{border: none;}
-     #projectstxt{margin-top: -35px;}
-     #projectlist{margin-left: -20px;}
+     
+     /* ul.projectlist li{display: inline;} */
+     .projectlist{border: none;}
+     /* #firsttile{margin-top: -0px;} */
+     .projectlist{margin-left: -40px;}
      #explorertxt{margin-left: 10px;}
-     #projectstxt{margin-left: 10px;}
+     #explorertxt{padding-bottom: 0px;}
+     .firsttitle{margin-left: 10px;}
+     .firsttitle{margin-top: -6px;}
+     .secondhalf{display: none;}
+     .firsthalf{flex-direction: row;}
      
      
    }
@@ -26,18 +32,18 @@
      .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     
      /* #mesvg,#mesvg2{width: 60%;} */
-     /* .me{display: none;} */
      .codetxt{font-size: 14px;}
      .rownum{font-size: 14px;}
      #output{font-size: 14px;}
+     /* #output{height: 250px;} */
      #outputtxt2{padding-top: 41px;}
      #smallrunico{padding-top: 33px;}
-     ul#projectlist li{display: block}
+     ul.projectlist li{display: block}
    }
    @media only screen and (max-width: 960px) {
     .me{display: none;}
+   
    }
 
    
@@ -46,39 +52,59 @@
      .menuopen {min-width: 220px;}
      .menuopen {width: 220px;}
      .menuopen{flex-direction: column;}
-     /* .me{display: block;} */
      /* #mesvg,#mesvg2{width: 75%;} */
      .codetxt{font-size: 16px;}
      .rownum{font-size: 16px;}
      #output{font-size: 16px;}
      #outputtxt2{padding-top: 48px;}
      #smallrunico{padding-top: 42px;}
-     ul#projectlist li{display: block}
+     ul.projectlist li{display: block}
   }
 
 
   /* height //////////////////////////////////////////////////////////////////////////////*/
 /* zooming out */
+/*growing footer. outputbox needs enough static height/padding so it wont chnge when code is "run. Then tweak heights again"
+when zooming in move my pic position up.
+why does screen width alse changes the footer size?? >> outputbox height in vh, 37vh*/
+
+
 
   @media only screen and (min-height: 699px) {
-    .aside , .asideProject{min-height: 85vh;}
-  }
-  @media only screen and (min-height: 772px) {
-    .aside , .asideProject{min-height: 87vh;}
+    .aside {min-height: calc(85vh - 173px) ;}
+    #outputbox{padding-bottom: 45px;}
+    .asideProject{min-height: 85vh;}
+  
+    
+  } 
+   @media only screen and (min-height: 772px) {
+    .aside , .asideProject{min-height: calc(87vh - 250px) ;}
+    #outputbox{padding-bottom: 118px;}
+    .asideProject{min-height: 87vh;}
   }
   @media only screen and (min-height: 874px) {
-    .aside , .asideProject{min-height: 88vh;}
+    .aside , .asideProject{min-height: calc(87vh - 340px) ;}
+    #outputbox{padding-bottom: 220px;}
+    .asideProject{min-height: 88vh;}
   }
   @media only screen and (min-height: 1005px) {
-    .aside , .asideProject{min-height: 90vh;}
+    .aside , .asideProject{min-height: calc(87vh - 455px) ;}
+    #outputbox{padding-bottom: 350px;}
+    .asideProject{min-height: 90vh;}
   }
   @media only screen and (min-height: 1165px) {
-    .aside , .asideProject{min-height: 91vh;}
+    .aside , .asideProject{min-height: calc(87vh - 595px) ;}
+    #outputbox{padding-bottom: 510px;}
+    .asideProject{min-height: 91vh;}
   }
   @media only screen and (min-height: 1398px) {
-    .aside , .asideProject{min-height: 92.5vh;}
+    .aside , .asideProject{min-height: calc(87vh - 795px) ;}
+    #outputbox{padding-bottom: 740px;}
+    .asideProject{min-height: 92.5vh;}
   }
   @media only screen and (min-height: 1748px) {
-    .aside , .asideProject{min-height: 100vh;}
+    .aside , .asideProject{min-height: calc(87vh - 1100px) ;}
+    #outputbox{padding-bottom: 1090px;}
+    .asideProject{min-height: 100vh;}
   }
 

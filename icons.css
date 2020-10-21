@@ -1,14 +1,38 @@
 #runico{
-    padding-top: 10px;
-    padding-left: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url("icons/runbtn.svg");
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 12px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    float: right;
   }
 
   #fileico{
+    width: 40px;
+    height: 40px;
+    background-image: url("icons/file.svg");
+    background-repeat: no-repeat;
+    padding-left: 6px;
+    border-left: solid 4px #333333;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     
-    margin-top: 10px;
-    padding-left: 5px;
+  }
+  #linkico{
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 30px;
+    background-image: url('icons/links.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     border-left: solid 4px #333333;
     
+ 
   }
 
   #filePath_3, #filePath_4{
@@ -43,24 +67,25 @@
   }
 
   
-  .footerIco{
+  .footerIcos{
     padding-left: 10px;
     padding-right: 10px;
     position: relative;
     right: -30px;
     cursor: pointer;
   }
-  .youtubeIco{
+  .footerIco{
     width: 20px;
     height: 17px;
-    
   }
-  .githubIco{
-    width: 18px;
-    height: 17px;
-    
-  }
-  .rgIco{
-    height: 15px;
-    
-  }
+
+  .minimize{
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-image: url('icons/minimize.svg');
+    background-size: contain;
+    display: none;
+    margin-top: 4px;
+   
+   }

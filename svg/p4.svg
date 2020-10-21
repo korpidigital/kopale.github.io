@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="p4.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 72.495833 66.145838"
+   height="250"
+   width="274">
+  <title
+     id="title3727">generic_edge_android_phone_device</title>
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       id="perspective915"
+       inkscape:persp3d-origin="97.226246 : 8.7572576 : 1"
+       inkscape:vp_z="-53.94162 : 53.75366 : 0"
+       inkscape:vp_y="-8.1362661 : 932.32382 : 0"
+       inkscape:vp_x="-76.096395 : -2.9140182 : 0"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       id="linearGradient3719"
+       inkscape:collect="always">
+      <stop
+         id="stop3715"
+         offset="0"
+         style="stop-color:#666666;stop-opacity:1" />
+      <stop
+         style="stop-color:#f3f3f3;stop-opacity:1;"
+         offset="0.08058813"
+         id="stop3725" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0.90476203"
+         id="stop3723" />
+      <stop
+         id="stop3717"
+         offset="1"
+         style="stop-color:#f2f2f2;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(1.7040369,0,0,1.4876187,-159.91866,82.401099)"
+       gradientUnits="userSpaceOnUse"
+       y2="45.131882"
+       x2="129.29164"
+       y1="45.198696"
+       x1="109.84773"
+       id="linearGradient3721"
+       xlink:href="#linearGradient3719"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:snap-global="false"
+     inkscape:snap-others="false"
+     inkscape:document-rotation="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     units="px"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="128.16392"
+     inkscape:cx="55.563242"
+     inkscape:zoom="1.979899"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>generic_edge_android_phone_device</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-106.49998)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       transform="matrix(1.0894023,0,0,1.1363786,7.3462114,-31.853985)"
+       id="g977">
+      <rect
+         id="rect10"
+         width="30.514288"
+         height="48.506603"
+         x="28.176847"
+         y="127.42388"
+         style="fill:#b3b3b3;stroke-width:0.421258"
+         ry="3.5783563"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="fill:url(#linearGradient3721);fill-opacity:1;stroke:none;stroke-width:0.444612"
+         id="rect20"
+         width="29.147974"
+         height="40.455307"
+         x="28.859999"
+         y="130.80345"
+         ry="1.4411564"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <ellipse
+         style="fill:#f2f2f2;stroke:none;stroke-width:0.421258"
+         id="path22"
+         cx="43.433998"
+         cy="173.39584"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         rx="1.9925373"
+         ry="1.7394787" />
+      <rect
+         style="fill:#f2f2f2;stroke:none;stroke-width:0.421258"
+         id="rect24"
+         width="6.7628965"
+         height="0.80828393"
+         x="40.052551"
+         y="128.7973"
+         ry="0.40414196"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <rect
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round"
+         id="rect841"
+         width="6.7572017"
+         height="3.7466717"
+         x="31.881908"
+         y="136.24948" />
+      <rect
+         y="136.32919"
+         x="40.191441"
+         height="3.7466717"
+         width="6.7572017"
+         id="rect841-7"
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round" />
+      <rect
+         y="136.28932"
+         x="48.500973"
+         height="3.7466717"
+         width="6.7572017"
+         id="rect841-5"
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round" />
+      <rect
+         y="141.11218"
+         x="31.973221"
+         height="3.7466717"
+         width="6.7572017"
+         id="rect841-1"
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round" />
+      <rect
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round"
+         id="rect841-7-7"
+         width="6.7572017"
+         height="3.7466717"
+         x="40.282757"
+         y="141.19191" />
+      <rect
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round"
+         id="rect841-5-1"
+         width="6.7572017"
+         height="3.7466717"
+         x="48.592285"
+         y="141.15202" />
+      <rect
+         y="146.05461"
+         x="31.973221"
+         height="3.7466717"
+         width="6.7572017"
+         id="rect841-59"
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round" />
+      <rect
+         style="fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round"
+         id="rect841-7-3"
+         width="6.7572017"
+         height="3.7466717"
+         x="40.282753"
+         y="146.13432" />
+      <rect
+         style="fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:0.370032;stroke-linejoin:round"
+         id="rect841-5-0"
+         width="6.7572017"
+         height="3.7466717"
+         x="48.592285"
+         y="146.09445" />
+      <ellipse
+         style="fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.478833;stroke-linejoin:round"
+         id="path895"
+         cx="43.798325"
+         cy="155.42128"
+         rx="4.5200205"
+         ry="3.8662469" />
+      <ellipse
+         style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1.38293;stroke-linejoin:round"
+         id="path897"
+         cx="43.750744"
+         cy="155.49515"
+         rx="2.5513394"
+         ry="2.4095984" />
+      <rect
+         style="fill:#ffcc00;fill-opacity:1;stroke:#cccccc;stroke-width:0.169;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect959"
+         width="17.008928"
+         height="1.8898809"
+         x="35.340775"
+         y="163.38539"
+         ry="0.94494045" />
+    </g>
+  </g>
+</svg>

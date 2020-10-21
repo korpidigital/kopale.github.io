@@ -45,6 +45,10 @@ html, body{
   display: flex;
   flex-direction: column;
 }
+.firsthalf{
+  display: flex;
+  flex-direction: column;
+}
 
 .menuopen{
   width: 100%;
@@ -53,14 +57,17 @@ html, body{
   font-family: 'Segoe UI';
   color: #D4D4D4;
   padding-top: 10px;
+  overflow: hidden;
 }
 .aside{
-  padding-top: 21px;
+  /* padding-top: 21px; */
   display: flex;
   flex-direction: column;
   background-color:#1E1E1E;
-  min-height: 85vh;
+  /* min-height: 85vh; */
   width: 100%;
+  /* padding-bottom: 85px; */
+  
 }
 
 .asideProject{
@@ -83,12 +90,12 @@ html, body{
   padding-bottom: 30px;
   font-size: 14px;
 }
-#projectstxt{
+.maintitle{
   font-weight: 1000;
   font-size: 14px;
 }
 
-#projectlist{
+.projectlist{
   margin-top: -2px;
   list-style-type: none;
   font-size: 14px;
@@ -103,6 +110,8 @@ html, body{
   position: relative;
   right: -30px;
 }
+
+
 .tabback {
   background-color: #252526;
   width: 100%;
@@ -150,15 +159,15 @@ position: relative;
 left: -60px;
 padding-right: 60px;
 padding-top: 1px;
-overflow: hidden;
+/* overflow: hidden; */
 
-display: flex; /* establish flex container */
-flex-direction: row; /* make main axis horizontal (default value) */
+display: flex; 
+flex-direction: row; 
 justify-content: center; /* center items horizontally, in this case */
 align-items: center; /* center items vertically, in this case */
 }
 
-#projectlist li:hover
+.projectlist li:hover
 {
   background-color:rgb(42, 45,46);
   cursor: pointer;

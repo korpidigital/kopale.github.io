@@ -14,7 +14,12 @@ const runOutput = '<div id="outputtxt"><span class="outtitle">OUTPUT</span><br><
 
 //elements
 const menuopen = document.getElementById("menuopen");
+const menubar = document.getElementById("menubar");
+const footer = document.getElementById("footer");
+const footerIcos = document.querySelectorAll("footerIcos");
+const header = document.getElementById("header");
 const fileico = document.getElementById("fileico");
+const linkico = document.getElementById("linkico");
 const aside = document.getElementById("aside");
 const output = document.getElementById("output");
 const tab1 = document.getElementById("tab1"); 
@@ -22,12 +27,14 @@ const tab2 = document.getElementById("tab2");
 const tabback = document.getElementById("tabback");
 const me = document.getElementById("me");
 const outputbox = document.getElementById("outputbox");
-const runbtn = document.getElementById("runbtn");
+const runbtn = document.getElementById("runico");
 const rownum = document.getElementById("rownum");
 const asideProject = document.getElementById("asideProject");
 const main = document.getElementById("mainId");
 const modal = document.getElementById("myModal");
 const minimize = document.querySelectorAll('.minimize');
+const mobile = document.querySelectorAll('.mobile');
+const body = document.body;
 
 
 //what tab are we on?
@@ -48,6 +55,24 @@ getNumRow();
 
 let screenW = window.innerWidth;
 console.log(screenW);
+
+function growFooterIcos(){
+    document.querySelectorAll('.footerIco').forEach(item => {
+        item.style.width = "60px";
+        item.style.height = "60px";
+        // item.style.marginRight = "10px";
+        // item.style.marginLeft = "10px";
+        
+    })
+}
+function smallFooterIcos(){
+    document.querySelectorAll('.footerIco').forEach(item => {
+        item.style.width = "20px";
+        item.style.height = "17px";
+        // item.style.marginRight = "0px";
+        // item.style.marginLeft = "0px";
+    })
+}
 
 //return project boxes all to original size
 function returnBoxes(){
@@ -87,7 +112,8 @@ function toggle(){
             //border
             fileico.style.borderLeft = 'solid 4px #333333';
 
-        }  
+        }
+
     menucount ++;   
     
 }}
@@ -97,12 +123,43 @@ function runcode(){
     return function(){        
             outputbox.innerHTML = runOutput;
             //button to gray
-            runbtn.style.fill = '#D4D4D4 ';
+            runbtn.style.backgroundImage = "url('icons/runbtngrey.svg')";
      
+}}
+//Link ico click
+linkcount = 1;
+linkico.addEventListener("click", clickLinks());
+function clickLinks(){
+    return function(){    
+        //OPEN
+        if (linkcount % 2 != 0  ) {
+
+            
+            footer.style.height = "216px";
+            linkico.style.borderLeft = 'solid 4px #D4D4D4';
+            output.style.display = "none";
+            footer.scrollIntoView(); 
+            growFooterIcos();
+
+        }
+        
+        //CLOSE
+        else if (linkcount % 2 == 0 ) {
+
+            footer.style.height = "21px";
+            linkico.style.borderLeft = 'solid 4px #333333';
+            output.style.display = "block";
+            tab1.scrollIntoView();
+            smallFooterIcos();
+            
+
+        }
+    linkcount ++;
+       
+    
 }}
 
 //tab click
-
 tab2.addEventListener("click", clickTab2());
 function clickTab2(){
     return function(){

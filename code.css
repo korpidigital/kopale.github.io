@@ -22,8 +22,8 @@
     display: flex;
     font-family: 'Segoe UI';
     color: #C2C2C2;
-    padding-bottom: 30px;
-    /* width: 87vw; */
+    /* padding-bottom: 135px; */
+    height: 170px;
     
   }
  
@@ -103,6 +103,7 @@
     background-color: #1E1E1E;
     border-top: solid 1px #707070;
     /* width: 96vw; */
+    display: block;
 
     
 
