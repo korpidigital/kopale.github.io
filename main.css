@@ -137,13 +137,13 @@ html, body{
 .tab1 {
   background-color: #1E1E1E;
   width: 40%;
-  min-width: 150px;
+  min-width: 130px;
   margin-left: -50px;
 }
 .tab2 {
   background-color: #2D2D2D;
   width: 40%;
-  min-width: 150px;  
+  min-width: 130px;  
 } 
 .tab{
   display: flex;

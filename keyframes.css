@@ -44,7 +44,7 @@
     top:110px;
     background-image: url("me2.svg");
     background-repeat: no-repeat;
-    background-size: 350px, 600px;
+    background-size: 95%, 100%;
     animation: animateImg .4s infinite;
     
 }

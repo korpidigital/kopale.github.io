@@ -34,6 +34,8 @@ const main = document.getElementById("mainId");
 const modal = document.getElementById("myModal");
 const minimize = document.querySelectorAll('.minimize');
 const mobile = document.querySelectorAll('.mobile');
+const githubIco = document.querySelectorAll('.githubIco');
+const youtubeIco = document.querySelectorAll('.youtubeIco');
 const body = document.body;
 
 
@@ -53,24 +55,42 @@ function getNumRow(){
 }
 getNumRow();
 
-let screenW = window.innerWidth;
-console.log(screenW);
+let screenH = window.innerHeight;
+console.log(screenH);
 
 function growFooterIcos(){
+    let screenW = window.innerWidth;
     document.querySelectorAll('.footerIco').forEach(item => {
-        item.style.width = "60px";
-        item.style.height = "60px";
-        // item.style.marginRight = "10px";
-        // item.style.marginLeft = "10px";
+        
+
+        if (screenW < 600) {
+            item.style.width = "40px";
+            item.style.height = "40px";
+            footer.style.flexDirection = "column";
+            item.style.marginTop = "40px";
+           
+            
+            
+
+        }
+        else{
+            item.style.width = "60px";
+            item.style.height = "60px";
+            footer.style.flexDirection = "row";
+            item.style.marginRight = "80px";
+        }
+        
         
     })
+
 }
 function smallFooterIcos(){
     document.querySelectorAll('.footerIco').forEach(item => {
         item.style.width = "20px";
         item.style.height = "17px";
-        // item.style.marginRight = "0px";
-        // item.style.marginLeft = "0px";
+        item.style.marginRight = "0px";
+        item.style.marginTop = "0px";
+        
     })
 }
 
@@ -132,15 +152,17 @@ linkico.addEventListener("click", clickLinks());
 function clickLinks(){
     return function(){    
         //OPEN
+        
         if (linkcount % 2 != 0  ) {
-
+            
             
             footer.style.height = "216px";
             linkico.style.borderLeft = 'solid 4px #D4D4D4';
             output.style.display = "none";
             footer.scrollIntoView(); 
             growFooterIcos();
-
+            
+            
         }
         
         //CLOSE
@@ -151,6 +173,7 @@ function clickLinks(){
             output.style.display = "block";
             tab1.scrollIntoView();
             smallFooterIcos();
+            footer.style.flexDirection = "row";
             
 
         }
