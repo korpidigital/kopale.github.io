@@ -37,7 +37,10 @@
     margin: 0px ;  
     animation: createBox .25s;
     display: flex;
+    flex-direction: column;
+    min-height: 250px;
     height: 100%;
+    margin: 3px;
     
     
 }
