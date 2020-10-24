@@ -29,7 +29,7 @@
 
 }
 
-.project{
+.project.box{
     border: #D4D4D4 solid 1px;
     background-color: #3C3C3C;
     height: 250px;
@@ -41,7 +41,12 @@
     min-height: 250px;
     height: 100%;
     margin: 3px;
-    
+    font-size: 45px;
+    font-weight: 1000;
+    font-family: Impact;
+    color: seashell;
+    -webkit-text-stroke: black 2px;
+    padding-left: 5px;
     
 }
 .project:hover {
@@ -49,32 +54,29 @@
 }
 
 
-.project {
-  font-size: 45px;
-  font-weight: 1000;
-  font-family: Impact;
-  color: seashell;
-  -webkit-text-stroke: black 2px;
-  padding-left: 5px;
-}
-.project.project1{
+
+.project.project1.box{
   background-image: url('svg/p1.svg');
 }
-.project.project2{
+.project.project2.box{
   background-image: url('svg/p2.svg');
 }
-.project.project3{
+.project.project3.box{
   background-image: url('svg/p3.svg');
 }
-.project.project4{
+.project.project4.box{
   background-image: url('svg/p4.svg');
 }
-.project.project5{
+.project.project5.box{
   background-image: url('svg/p5.svg');
 
 }
 a{
   color: white;
+}
+.projectImg{
+  display: block;
+  margin: 0 auto;
 }
 
 

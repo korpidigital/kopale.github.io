@@ -70,7 +70,7 @@
 when zooming in move my pic position up.
 why does screen width alse changes the footer size?? >> outputbox height in vh, 37vh*/
 
-
+/* make aside like asideProject
 
 /* @media only screen and (max-height: 641px) {
   .me{background-size: 78%, 100%;}
@@ -78,39 +78,39 @@ why does screen width alse changes the footer size?? >> outputbox height in vh, 
 }  */
 /*zoom in ____________100%______________________zoom out*/
   @media only screen and (min-height: 699px) {
-    .aside {min-height: calc(85vh - 173px) ;}
+    /* .aside {min-height: calc(85vh - 173px) ;} */
     #outputbox{padding-bottom: 45px;}
-    .asideProject{min-height: 85vh;}
+    .aside, .asideProject{min-height: 85vh;}
     /* .me{background-size: 100%, 100%;} */
   } 
    @media only screen and (min-height: 772px) {
-    .aside {min-height: calc(87vh - 250px) ;}
+    /* .aside {min-height: calc(87vh - 250px) ;} */
     #outputbox{padding-bottom: 118px;}
-    .asideProject{min-height: 87vh;}
+    .aside,.asideProject{min-height: 87vh;}
   }
   @media only screen and (min-height: 874px) {
-    .aside{min-height: calc(87vh - 340px) ;}
+    /* .aside{min-height: calc(87vh - 340px) ;} */
     #outputbox{padding-bottom: 220px;}
-    .asideProject{min-height: 88vh;}
+    .aside,.asideProject{min-height: 88vh;}
   }
   @media only screen and (min-height: 1005px) {
-    .aside{min-height: calc(87vh - 455px) ;}
+    /* .aside{min-height: calc(87vh - 455px) ;} */
     #outputbox{padding-bottom: 350px;}
-    .asideProject{min-height: 90vh;}
+    .aside,.asideProject{min-height: 90vh;}
   }
   @media only screen and (min-height: 1165px) {
-    .aside{min-height: calc(87vh - 595px) ;}
+    /* .aside{min-height: calc(87vh - 595px) ;} */
     #outputbox{padding-bottom: 510px;}
-    .asideProject{min-height: 91vh;}
+    .aside,.asideProject{min-height: 91vh;}
   }
   @media only screen and (min-height: 1398px) {
-    .aside{min-height: calc(87vh - 795px) ;}
+    /* .aside{min-height: calc(87vh - 795px) ;} */
     #outputbox{padding-bottom: 740px;}
-    .asideProject{min-height: 92.5vh;}
+    .aside,.asideProject{min-height: 92.5vh;}
   }
   @media only screen and (min-height: 1748px) {
-    .aside{min-height: calc(87vh - 1100px) ;}
+    /* .aside{min-height: calc(87vh - 1100px) ;} */
     #outputbox{padding-bottom: 1090px;}
-    .asideProject{min-height: 100vh;}
+    .aside,.asideProject{min-height: 100vh;}
   }
 

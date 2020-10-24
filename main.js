@@ -46,7 +46,7 @@ const body = document.body;
 let tab = "tab1";
 asideProject.style.display = "none";
 //what project box is selected
-let selectedBox = "";
+let selectedBox = "none";
 
 //print row numbers
 function getNumRow(){
@@ -109,6 +109,7 @@ function returnBoxes(){
         selectedBox.children[0].style.display = "none";
         selectedBox.children[1].style.display = "none";
         
+        
     })
 }
    
@@ -161,7 +162,7 @@ function clickLinks(){
             
             footer.style.height = "216px";
             linkico.style.borderLeft = 'solid 4px #D4D4D4';
-            output.style.display = "none";
+            // output.style.display = "none";
             footer.scrollIntoView(); 
             growFooterIcos();
             
@@ -173,7 +174,7 @@ function clickLinks(){
 
             footer.style.height = "21px";
             linkico.style.borderLeft = 'solid 4px #333333';
-            output.style.display = "block";
+            // output.style.display = "block";
             tab1.scrollIntoView();
             smallFooterIcos();
             footer.style.flexDirection = "row";
@@ -231,6 +232,88 @@ document.querySelectorAll('.project').forEach(item => {
    
     })
 })
+//event listener for list projects click
+document.querySelectorAll('.list').forEach(item => {
+    item.addEventListener('click', event => {
+        //move to project tab
+        tab = "tab2";
+        tab2.style.backgroundColor ="#1E1E1E";
+        tab1.style.backgroundColor ="#2D2D2D";
+        aside.style.display = "none";
+        asideProject.style.display = "block";
+        //retun boxes to original size 
+        
+        //swich case to pair list and box IDs
+        let boxId = "";
+        switch(item.id) {
+            case "lip1":
+                boxId = "p1";
+
+              break;
+            case "lip2":
+                boxId = "p2";
+
+              break;
+            case "lip3":
+                boxId = "p3";
+
+            break;
+            case "lip4":
+                boxId = "p4";
+
+            break;
+            case "lip5":
+                boxId = "p5";
+
+              break;
+            case "lip6":
+                boxId = "p6";
+
+              break;
+            case "lip7":
+                boxId = "p7";
+
+            break;
+            case "lip8":
+                boxId = "p8";
+
+            break;
+            default:
+            break;
+        }
+        //get boxes
+        document.querySelectorAll('.project').forEach(item => {
+            if (item.id != boxId) {
+                item.style.display ="none"; 
+                //make previous selected box small
+            }
+            else{     
+                item.style.display ="block"; 
+                if (selectedBox != "none") {
+                    //this from returnBox function
+                    selectedBox.style.animation = "smallBox 0s forwards";
+                    //images are named same as project pox id
+                    selectedBox.style.backgroundImage = `url('svg/${selectedBox.id}.svg')`;
+                    //hide close btn 
+                    selectedBox.children[0].style.display = "none";
+                    selectedBox.children[1].style.display = "none";
+                }
+                
+            }
+        })
+        
+
+        //get this box
+        selectedBox = document.getElementById(boxId);
+        selectedBox.style.animation = "growBox .25s forwards";
+        selectedBox.style.backgroundImage = "none";
+
+        //close btn visible
+        selectedBox.children[0].style.display = "block";
+        selectedBox.children[1].style.display = "block";
+   
+    })
+})
 
 
 //close btn
@@ -238,7 +321,7 @@ document.querySelectorAll('.minimize').forEach(item => {
     item.addEventListener('click', event => {
        returnBoxes();
        event.stopPropagation();
-      
+      selectedBox ="none";
     })
 })
 
