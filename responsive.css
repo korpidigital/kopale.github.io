@@ -10,7 +10,7 @@
      #output{font-size: 11px;}
      /* #output{height: 400px;} */
      #outputtxt2{padding-top: 34px;}
-     #smallrunico{padding-top: 25px;}
+
      
      /* ul.projectlist li{display: inline;} */
      .projectlist{border: none;}
@@ -40,7 +40,6 @@
      #output{font-size: 16px;}
      /* #output{height: 250px;} */
      #outputtxt2{padding-top: 41px;}
-     #smallrunico{padding-top: 33px;}
      ul.projectlist li{display: block}
    }
    @media only screen and (max-width: 960px) {
@@ -59,7 +58,6 @@
      .rownum{font-size: 16px;}
      #output{font-size: 16px;}
      #outputtxt2{padding-top: 48px;}
-     #smallrunico{padding-top: 42px;}
      ul.projectlist li{display: block}
   }
 

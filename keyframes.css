@@ -1,7 +1,7 @@
 
 @keyframes growBox {
     0% {
-      width: 274px;
+      width: 269px;
       height: 250px;
       text-align: left;
     }
@@ -21,7 +21,7 @@
 
     100% {
             
-        width: 274px;
+        width: 269px;
         height: 250px;
         text-align: left;
     }

@@ -34,16 +34,22 @@
     
  
   }
+  .smallrun{
+    width: 20px;
+    height: 20px;
+    background-image: url('icons/smallrunico.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;  
+    margin-left: 5px;
+    margin-top: 1px; 
+ 
+  }
 
   #filePath_3, #filePath_4{
     fill: #2D2D2D;
   }
   
-  #smallrunico{
-    
-    padding-left: 9px;
-    width: 6%;
-  }
+
   #path1{
     fill: #1E1E1E;
   }
