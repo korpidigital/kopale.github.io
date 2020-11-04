@@ -24,6 +24,8 @@
      .firsthalf{flex-direction: row;}
      .tabtxt1{font-size: 12px;}
      .tabtxt2{font-size: 12px;}
+     .projectPage{  padding-left: 0px;
+                    padding-right: 0px;}
      
      
    }
@@ -41,9 +43,13 @@
      /* #output{height: 250px;} */
      #outputtxt2{padding-top: 41px;}
      ul.projectlist li{display: block}
+     .projectPage{  padding-left: 100px;
+                    padding-right: 100px;}
    }
    @media only screen and (max-width: 960px) {
     .me{display: none;}
+    
+
    
    }
 
@@ -59,6 +65,8 @@
      #output{font-size: 16px;}
      #outputtxt2{padding-top: 48px;}
      ul.projectlist li{display: block}
+     .projectPage{  padding-left: 200px;
+                    padding-right: 200px;}
   }
 
 
@@ -75,35 +83,51 @@ why does screen width alse changes the footer size?? >> outputbox height in vh, 
      
 }  */
 /*zoom in ____________100%______________________zoom out*/
+
   @media only screen and (min-height: 699px) {
-    /* .aside {min-height: calc(85vh - 173px) ;} */
     #outputbox{padding-bottom: 45px;}
     .aside, .asideProject{min-height: 85vh;}
     /* .me{background-size: 100%, 100%;} */
   } 
+  @media only screen and (min-height: 754px) {
+    #outputbox{padding-bottom: 109px;}
+    .aside, .asideProject{min-height: 86vh;}
+    /* .me{background-size: 100%, 100%;} */
+  } 
    @media only screen and (min-height: 772px) {
-    /* .aside {min-height: calc(87vh - 250px) ;} */
     #outputbox{padding-bottom: 118px;}
     .aside,.asideProject{min-height: 87vh;}
   }
+   @media only screen and (min-height: 838px) {
+    #outputbox{padding-bottom: 183px;}
+    .aside,.asideProject{min-height: 87vh;}
+  }
   @media only screen and (min-height: 874px) {
-    /* .aside{min-height: calc(87vh - 340px) ;} */
     #outputbox{padding-bottom: 220px;}
     .aside,.asideProject{min-height: 88vh;}
   }
+  @media only screen and (min-height: 943px) {
+    #outputbox{padding-bottom: 295px;}
+    .aside,.asideProject{min-height: 88.8vh;}
+  }
   @media only screen and (min-height: 1005px) {
-    /* .aside{min-height: calc(87vh - 455px) ;} */
     #outputbox{padding-bottom: 350px;}
     .aside,.asideProject{min-height: 90vh;}
   }
+  @media only screen and (min-height: 1131px) {
+    #outputbox{padding-bottom: 475px;}
+    .aside,.asideProject{min-height: 90.5vh;}
+  }
   @media only screen and (min-height: 1165px) {
-    /* .aside{min-height: calc(87vh - 595px) ;} */
     #outputbox{padding-bottom: 510px;}
     .aside,.asideProject{min-height: 91vh;}
   }
   @media only screen and (min-height: 1398px) {
-    /* .aside{min-height: calc(87vh - 795px) ;} */
     #outputbox{padding-bottom: 740px;}
+    .aside,.asideProject{min-height: 92.5vh;}
+  }
+  @media only screen and (min-height: 1508px) {
+    #outputbox{padding-bottom: 870px;}
     .aside,.asideProject{min-height: 92.5vh;}
   }
   @media only screen and (min-height: 1748px) {
