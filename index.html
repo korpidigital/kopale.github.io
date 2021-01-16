@@ -56,7 +56,7 @@
                     <li id="lip4" class="project4 list"><span class="listItem">Android dataset recorder</span></li>
                     <li id="lip5" class="project5 list"><span class="listItem">AI Voice commands</span></li>
                     <li id="lip6" class="project6 list"><span class="listItem">My website</span></li>
-                    <li id="lip7" class="project7 list"><span class="listItem">Mushroom App</span></li>     
+                    <li id="lip7" class="project7 list"><span class="listItem">Customer website 1</span></li>     
                 </ul>
                 
                 </div>
@@ -67,7 +67,8 @@
                         <li><span class="listItem">Machine learning</span> </li>
                         <li><span class="listItem">Mobile development</span></li>
                         <li><span class="listItem">Web development</span></li>
-                        <li><span class="listItem">Published papers</span></li>    
+                        <li><span class="listItem">Published papers</span></li>
+                        <li><span class="listItem">Customer work</span></li>
                     </ul>
                 </div>
                 
@@ -151,13 +152,115 @@
             <div id="p1" class="project project1 box">
                 <div class="minimize"></div>
                 IOT TABLE TENNIS
-                <div class="projectPage"></div>
+                <div class="projectPage">
+                    <p>This is version 2. Documentation of version 1 of this project is available here: 
+                        <a href="https://www.researchgate.net/publication/338683456_Use_of_an_IoT_Technology_to_Analyse_the_Inertial_Measurement_of_Smart_Ping-pong_Paddle
+                        ">Research Gate Link</a>
+                
+                    </p>
+                    <iframe class="projectImg" width="70%" height="415" src="https://www.youtube.com/embed/t19XiV-uCdM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    <p>
+                        This research and development is continuation from previous school project “Smart ping pong paddle, Orientation measurement of game equipment”. In that first version the theory was there but final product lacked desired functionality regarding stable orientation and paddle angles.
+                        In the second version those basic problems are taken care of by changing the inertial measure-ment unit (IMU) and some additional features are researched like ball hit detection, paddle posi-tion measurement and ball tracking with machine learning. 
+                    </p>
+                    <p>
+                        Overall system block diagram is still the same so only the parts that are changed are covered more carefully. Report is structured so that each feature is covered one by one. Paddle position measurement is addressed in “Related works” where possibilities of IMU’s 3D position tracking capabilities are researched. Followed by “Orientation measurement” where we cover the new IMU sensor, theory of rotation in three dimensions and implementation both in MCU’s Arduino code and Unity’s C# code. Orientation and paddle angle measurement are on the main focus here, but after that comes “Hit detection” where the use of piezo tap sensor is considered.
+                    </p>
+                    <h1>2 Related works</h1>
+                    <p>
+                        In his thesis “Position Estimation Using an InertialMeasurement Unit Without TrackingSystem” Johnny Leporcq from Aalto university tries to estimate accurate position of an IMU sensor com-posed of accelerometer, gyroscope and magnetometer without any additional tracking system or expensive calibration equipment. Usually GPS is used in pair with IMU to correct position drifting.
+                        Precise calibration of each sensor plays crucial part in sensor fusion position estimation and Ex-tended Kalman Filter and Particle swarm optimization algorithms are used for that. To get position velocity is needed and it is obtained by integration of acceleration with respect to time and then again by integrating velocity with respect to time position is calculated. After testing this in prac-tice author concludes that is hardly possible to get reliable position estimation without external tracking system because any small noise or bias or mismatch between accelerometer and gravity signal will cause huge errors after the double integration process. 
+
+                    </p>
+                    <p>
+                        Due to limitations expressed in the thesis, three dimensional position tracking does not seem via-ble option for Smart ping pong paddle project. Adding external GPS sensor to the system is not good idea either since adding more hardware would affect the playability of the game itself. 
+                    </p>
+                    <h1>3 Orientation measurement</h1>
+                    <h2>3.1	Euler angles and quaternions</h2>
+                    <p>
+                        Euler angles store orientation using three angles. These three angles correspond to three object space-axis: Yaw and pitch define which way object is facing, yaw being the horizontal circle and pitch being the vertical circle. Roll measures the amount of twist. There are some disadvantages with Euler angles when defining full 360-degree rotation in every axis, because the three angles are not completely independent from each other so the representation for given orientation is not unique and interpolating between two orientations is problematic. For that reason, in this project Euler angles are only used to show the angle on the screen since they are easy to understand by humans. Actual object orientation is defined by quaternions.
+                    </p>
+                    <p>
+                        Quaternions avoid problems seen in Euler angles by using four numbers to express an orienta-tion. Quaternion can be described as 4D complex number that expresses angular displacement by using an axis of rotation and an amount of rotation on that axis and consist of scalar and vector components. Unity has functions to define quaternion based on the four values between 0 to 1 (or -1) from the orientation sensor and to transform object based on that. 
+                    </p>
+                    <h2>3.2 Adafruit BNO055 absolute orientation sensor</h2>
+                    <p>In the previous version with MPU6050 IMU sensor the sensor fusion and accurate calibration cal-culations turned out to error sensitive and challenging task, so when BNO055 9-DOF Absolute Orientation IMU Fusion Breakout Board does all those calculation on board with the help of ARM Cortex-M0 based processor, it is obvious choice for this project since the size is still small enough. </p>
+                    <p>Like MPU6050 sensor, BNO055 transfers data between transmitter MCU (Wemos D1 mini) via I2C connection. BNO055’s power 3.3-5.0V, ground, SDA, and SCL are connected to corresponding GPIOs.</p>
+                    <p>Calibration is done on in the board every time it is powered on. Gyroscope, accelerometer and magnetometer all need valid calibration data that is gathered by moving the sensor to different positions. A “calibration dance” is required to get the sensor fully calibrated and it takes under a minute. Full (3) calibration value for gyroscope is achieved when sensor is still in any position. Magnetometer may need figure 8 motion in three dimensions to be fully calibrated. Accelerometer is most time consuming one since the sensor needs to be placed in six standing positions, one per side/face. </p>
+                    <h2>3.3 Arduino IDE </h2>
+                    <p>Compared to earlier Arduino IDE code this one is more simple, since Adafruit sensor and BNO055 libraries make obtaining pre-processed orientation data and calibration state values easy. For ex-ample, next short code snippet is all you need to get one of four needed quaternion values:</p>
+                    <p><i>bno.begin();<br>
+                        imu::Quaternion quat = bno.getQuat();<br>
+                        String sensorValue = String(quat.w(), 2);
+                        </i></p>
+                    <p>Rest of the Arduino code concerning vibration motor and data transformation via WLAN are pretty much the same with the earlier version. There are two Arduino scripts “transmitter.ino” and “re-ceiver.ino” for each MCU.</p>
+                    <h2>3.4 Unity game engine</h2>
+                    <p>The “motion2.cs” script handles object rotation in Unity. First it reads data array that receiver MCU wrote to the serial port. It splits array to quaternion and calibration values. Quaternions need to be normalized because floating-point precession errors will cause it to not be unit length. So next in the code normalization is done: </p>
+                    <p><i>float factor = Mathf.Sqrt(Mathf.Pow(x, 2f) + Mathf.Pow(y, 2f) + Mathf.Pow(z, 2f) + Mathf.Pow(w, 2f));<br>
+                        xNorm = x / factor;<br>
+                        yNorm = y / factor;<br>
+                        zNorm = z / factor;<br>
+                        wNorm = w / factor;
+                     </i></p>
+                     <p>	Unity engine has method to create rotation quaternion and transform object function with that:</p>
+                    <p><i>Quaternion quat = new Quaternion(xNorm, zNorm, yNorm, wNorm);<br>
+                        transform.rotation = Quaternion(quat);
+                    </i></p>
+                    <p>Other unity scripts included do following things: Get quaternion, calibration and angle values on the screen, make it possible to select available COM-port from dropdown menu, and rotate camera manually with arrow keys. That camera rotation is for last adjustment after the calibration to get the view just right. </p>
+                    <p>There are also some scripts for hit detection, that I go over briefly since the concept was aban-doned from the last prototype.</p>
+                    <h1>4 Hit detection</h1>
+                    <p>Hit detection was an idea to connect piezo disc sensor to the setup and put the sensor on the paddle to make pop-up text indicator appear on the screen when ball hits. Piezoelectric effect measures the electrical potential caused by mechanical force like ball hitting the paddle, where it is easily read with MCU’s analog read pin. Pull down resistor needs to be added between sensor and analog pin. Bigger the resistor more sensitive it is to the hits. Thresh hold was added in Ar-duino code to pick up right amount of force. </p>
+                    <p>Concept gave good results when piezo sensor was only sensor connected to the MCU. But when piezo sensor and orientation sensor were both connected to Wemos D1 mini MCU both sensors started behaving unreliably. MCU might not be able to deliver needed amount of power to sensors at the same time. To keep orientation reliable, hit detection idea was scrapped. Adding more sen-sors to the setup is not good idea anyways since machine learning may be able to gather that in-formation and more.</p>
+                    <h1>5 RESULTS AND CONCLUSION</h1>
+                    <p>With new orientation sensor set goal of stable object rotation and angle information was success-ful and new avenues for IoT in table tennis was researched. Machine learning and computer vi-sion seems to be a potential direction for information gathering in sports in general. </p>
+                    <p>Here is explanation how Smart Ping Pong Paddle v2 operates: </p>
+                    <ul>
+                        <li>1.	Connect receiver to PC’s USB</li>
+                        <li>2.	Open Unity Application</li>
+                        <li>3.	Select COM-port where receiver is connected</li>
+                        <li>4.	Switch power on the paddle</li>
+                        <li>5.	Vibration motor indicates when paddle MCU has WLAN connection with receiver MCU</li>
+                        <li>6.	Calibrate by moving the paddle around</li>
+                        <li>7.	Adjust camera with arrow keys if needed</li>
+                        <li>8.	Play with it</li>
+                    
+                    </ul>
+                    <h1>6 References</h1>
+                    <p>Bno055 sensor:
+                        https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor
+                        </p>
+                    <p>Johnny Leporcq, Position Estimation Using an InertialMeasurement Unit Without TrackingSystem:
+                        
+                    <a href="https://aaltodoc.aalto.fi/bitstream/handle/123456789/32426/master_Leporcq_Johnny_2018.pdf?sequence=1&isAllowed=y">link</a>
+                        </p>
+                    <p>Book for orientation theory:
+                        3D math primer for graphics and game development by Dunn and Parberry, 2011 Taylor and Fran-cis Group, LLC
+                        </p>
+                    <p>Piezo disc video:
+                        https://www.youtube.com/watch?v=sqHJ9tDC9IM
+                        </p>
+                </div>
             </div>
             <div id="p2" class="project project2 box">
                 <div class="minimize"></div>
                 AI TABLE TENNIS
                 <div class="projectPage">
+                    <p>
+                        Utilizing deep learning, more specifically computer vision object detection and tracking is the next logical direction for this project as it does not demand modification of a gaming equipment or af-fect the gameplay in any way. 
+                    </p>
+                    <p>
+                    Development paths for such computer vision AI could be ball speed estimation, ball trajectory path estimation, and collection of all kinds of statistics about the game like times each player hit the ball to the net or over the table.
+                    </p>
+                    <p>
+                    Many of those features are built on the detection of the ball from the video so model was trained using “You only look once” (YOLO) real-time object detection system. Custom dataset was made by taking 200 frames out of 3 different ITTF table tennis videos and labeling ball from each frame. Model training was done following the steps from Youtube video “YOLOv3 in the CLOUD: Install and Train Custom Object Detector” by The AI Guy, so the details are not repeated here. 
+                    </p>
+                    <p>
+                    Model was able to detect the ball with high enough accuracy for all the other features to be pos-sible in theory. This was not yet deep dive into the deep learning but rather proof of concept for the future research and development. 
+                    </p>
                     <iframe class="projectImg" width="70%" height="415" src="https://www.youtube.com/embed/UApt6UGgiuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h2>References</h2>
+                    <p>YoloV3 model training video:
+                        https://www.youtube.com/watch?v=10joRJt39Ns
+                    </p>
                 </div>
             </div>
             <div id="p3" class="project project3 box">
@@ -227,7 +330,7 @@
             <div id="p7" class="project project7 box">
                
                 <div class="minimize"></div>
-                 MUSHROOM APP
+                 CUSTOMER WEBSITE 1
                 <div class="projectPage"></div>
             </div>
             <div id="p8" class="project project8 box">

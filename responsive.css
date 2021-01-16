@@ -84,15 +84,17 @@ why does screen width alse changes the footer size?? >> outputbox height in vh, 
 }  */
 /*zoom in ____________100%______________________zoom out*/
 
-  @media only screen and (min-height: 699px) {
+@media only screen and (max-height: 699px) {
+  #outputbox{padding-bottom: 0px;}
+  .aside, .asideProject{min-height: 87.5vh;}
+} 
+@media only screen and (min-height: 699px) {
     #outputbox{padding-bottom: 45px;}
     .aside, .asideProject{min-height: 85vh;}
-    /* .me{background-size: 100%, 100%;} */
   } 
   @media only screen and (min-height: 754px) {
     #outputbox{padding-bottom: 109px;}
     .aside, .asideProject{min-height: 86vh;}
-    /* .me{background-size: 100%, 100%;} */
   } 
    @media only screen and (min-height: 772px) {
     #outputbox{padding-bottom: 118px;}
@@ -131,7 +133,6 @@ why does screen width alse changes the footer size?? >> outputbox height in vh, 
     .aside,.asideProject{min-height: 92.5vh;}
   }
   @media only screen and (min-height: 1748px) {
-    /* .aside{min-height: calc(87vh - 1100px) ;} */
     #outputbox{padding-bottom: 1090px;}
     .aside,.asideProject{min-height: 100vh;}
   }

@@ -93,5 +93,7 @@
     background-size: contain;
     display: none;
     margin-top: 4px;
+    /* padding-right: 50vw; */
+    /* background-repeat: no-repeat; */
    
    }
