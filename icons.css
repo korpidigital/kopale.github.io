@@ -87,13 +87,14 @@
 
   .minimize{
     float: left;
-    width: 40px;
+    /* width: 40px; */
     height: 40px;
     background-image: url('icons/minimize.svg');
     background-size: contain;
     display: none;
     margin-top: 4px;
-    /* padding-right: 50vw; */
-    /* background-repeat: no-repeat; */
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    width: 100%;
    
    }
