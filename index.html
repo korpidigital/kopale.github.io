@@ -157,8 +157,10 @@
                         <a href="https://www.researchgate.net/publication/338683456_Use_of_an_IoT_Technology_to_Analyse_the_Inertial_Measurement_of_Smart_Ping-pong_Paddle
                         ">Research Gate Link</a>
                 
+                   <p><iframe class="projectImg" width="70%" height="415" src="https://www.youtube.com/embed/t19XiV-uCdM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    <p>
                     </p>
-                    <iframe class="projectImg" width="70%" height="415" src="https://www.youtube.com/embed/t19XiV-uCdM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    <p>
+                     <h1>1 introduction</h1>
+                    </p>    
                         This research and development is continuation from previous school project “Smart ping pong paddle, Orientation measurement of game equipment”. In that first version the theory was there but final product lacked desired functionality regarding stable orientation and paddle angles.
                         In the second version those basic problems are taken care of by changing the inertial measure-ment unit (IMU) and some additional features are researched like ball hit detection, paddle posi-tion measurement and ball tracking with machine learning. 
                     </p>
@@ -256,7 +258,7 @@
                     <p>
                     Model was able to detect the ball with high enough accuracy for all the other features to be pos-sible in theory. This was not yet deep dive into the deep learning but rather proof of concept for the future research and development. 
                     </p>
-                    <iframe class="projectImg" width="70%" height="415" src="https://www.youtube.com/embed/UApt6UGgiuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="projectImg projectVideo" src="https://www.youtube.com/embed/UApt6UGgiuA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <h2>References</h2>
                     <p>YoloV3 model training video:
                         https://www.youtube.com/watch?v=10joRJt39Ns
@@ -323,9 +325,131 @@
                 </div>
             </div> 
             <div id="p6" class="project poject6 box">
-                <div class="minimize"></div>
+                <div class="minimize">
+                    
+                </div>
                 AI VOICE COMMANDS
-                <div class="projectPage"></div>
+                <div class="projectPage">
+                    <p><iframe class="projectImg projectVideo" src="https://www.youtube.com/embed/0DVFdk3BF_g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </p>
+                    <h1>1 Introduction</h1>
+                    <p>&nbsp;</p>
+                    <p>DeepSpeech is an open-source Speech-To-Text engine, it uses a model trained by machine learning techniques based on Baidu's Deep Speech research paper (<a href="https://arxiv.org/abs/1412.5567"><em>https://arxiv.org/abs/1412.5567</em></a>). Project DeepSpeech uses Google's TensorFlow to make the implementation easier. The documentation for installation, usage, and training models are available on <em>deepspeech.readthedocs.io</em></p>
+                    <p>&nbsp;</p>
+                    <p>This project aims to train a DeepSpeech model recognizing the following 16 Finnish commands: Anni, Annille, Manu, Manulle, Minna, Minnalle, moi, Olka, Onni, Otto, Otolle, tule t&auml;nne, netti, soita, kyll&auml;, ei.</p>
+                    <p>&nbsp;</p>
+                    <h1>2 Environment</h1>
+                    <p>&nbsp;</p>
+                    <p>The training is done in Ubuntu 18.04. operating system and a computer with CUDA enabled NVIDIA graphics card. The CUDA API allows the model training to be computed using GPU and makes the training roughly 100 times faster than using CPU. CUDA 10.1 installation tutorial for Ubuntu: (<a href="https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130"><em>https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130</em></a><em>). </em>Python 3.6 is used for running scripts.</p>
+                    <p>&nbsp;</p>
+                    <h1>3 Dataset</h1>
+                    <p>&nbsp;</p>
+                    <p>Dataset consists of audio WAV files of each command said by 3 different persons 10 times making the total recordings 480. Recording is done using Audacity. WAV files are augmented using Matlab audioDataAugmenter library. Augmentation shifts the pitch of every file randomly 12 times making a total recording count of 5760. Audio sample rate is 16kHz and audio format is ENCODING_PCM_16BIT mono channel audio. Matlab script &ldquo;<strong>augmentData.m</strong>&rdquo; is attached in the documentation.</p>
+                    <p>&nbsp;</p>
+                    <p>An Android application for dataset recording was made, but due to time constraints it was not optimized for this demo. The application uses the wrong words and records in the wrong sample rate, but it has potential to make dataset collection much quicker.</p>
+                    <p>&nbsp;</p>
+                    <p>Here is a link to the current dataset recorder application source code and explanation: https://github.com/korpidigital/datasetRecorder</p>
+                    <p>&nbsp;</p>
+                    <h1>4 Training</h1>
+                    
+                    <span class="pcPath">
+                    <p>&nbsp;</p>
+                    <p>The official DeepSpeech documentation advises to use a virtual environment for the training, but configuring it so that it would have all the necessary libraries had issues. After trying to list them in the PATH file with no response, it was decided not to use one. It did not prove to be an issue, a virtual environment is mostly useful for performance issues when multiple projects with different sets of libraries and dependencies are being developed on the same machine. Here are the steps listed from downloading dependencies, configuring files and folder architecture to running the training.</p>
+                    <p>&nbsp;</p>
+                    <ol>
+                    <li>Download DeepSpeech repo (<a href="https://github.com/mozilla/DeepSpeech">https://github.com/mozilla/DeepSpeech</a>). This is the project folder, so the terminal is opened in this path and Linux commands (such as pip3 and python3) in the following steps are run there. For clarity, the terminal commands are coloured purple. In this example the path is <span class="pcPath">&lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/&gt;</em></span> </li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="2">
+                    <li>pip3 install deepspeech-gpu</li>
+                    </ol>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="pcPath">pip3 install --upgrade pip==20.2.4 wheel==0.34.2 setuptools==49.6.0</span></p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pip3 install --upgrade -e .</p>
+                    <p>&nbsp;</p>
+                    <ol start="3">
+                    <li>Download &ldquo;kenlm&rdquo; language model interface by Kenneth Heafield (<a href="https://github.com/kpu/kenlm">https://github.com/kpu/kenlm</a>). Read BUILD file info and build it. Put build files in a folder named &ldquo;kenlm&rdquo; and add it to the project folder.</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="4">
+                    <li>The project folder has a folder named &ldquo;training&rdquo; and in that there is a folder named &ldquo;deepspeech_training&rdquo;. Move &ldquo;deepspeech_training&rdquo; to the project folder. This makes the training script to have the right path to &ldquo;deepspeech_training&rdquo;.</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="5">
+                    <li>Download files for scorer creation (<a href="https://github.com/mozilla/DeepSpeech/releases/download/v0.9.1/native_client.amd64.cuda.linux.tar.xz">https://github.com/mozilla/DeepSpeech/releases/download/v0.9.1/native_client.amd64.cuda.linux.tar.xz</a>) and put those files to path <span class="pcPath"> &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/data/lm/&gt;</em></span></li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="6">
+                    <li>At <span class="pcPath"> &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/data/lm/&gt; </em></span>create an alphabet.txt file with each letter (and sign &ldquo;_&rdquo; used in &ldquo;tule_t&auml;nne&rdquo;) separated by line change and vocab.txt file with each command separated by space.</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="7">
+                    <li>At <span class="pcPath"></span> &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/data/lm/&gt;<br /> </em>python3 generate_lm.py --input_txt ./vocab.txt --output_dir . \<em><br /> </em>--top_k 16 --kenlm_bins /home/tuomas/Desktop/DeepSpeech-0.9.1/kenlm/bin \<br /> --arpa_order 3 --max_arpa_memory "85%" --arpa_prune "0|0|1" \<br /> --binary_a_bits 255 --binary_q_bits 8 --binary_type trie \<br /> --discount_fallback<br /> This generates a language model, it is used for the creation of the scorer. The scorer is composed of two sub-components, a KenLM language model and a trie data structure containing all words in the vocabulary. Scorer info: (<a href="https://deepspeech.readthedocs.io/en/latest/Scorer.html">https://deepspeech.readthedocs.io/en/latest/Scorer.html</a>).</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <ol start="8">
+                    <li>Make scorer file:<br /> At &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/data/lm/&gt;<br /> </em>./generate_scorer_package --alphabet alphabet.txt --lm lm.binary --vocab vocab-16.txt \<br /> --package kenlm.scorer --default_alpha 0.931289039105002 --default_beta 1.1834137581510284<br /> --force_bytes_output_mode false</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="9">
+                    <li>At &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1&gt; </em>make 5 new folders<br /> mkdir checkout<br /> mkdir model_export<br /> mkdir train<br /> mkdir dev<br /> mkdir test</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="10">
+                    <li>Dataset is divided between &ldquo;train&rdquo;, &ldquo;dev&rdquo; and &ldquo;test&rdquo; folders (70%, 20%, 10%). CSV-files for training consists of &ldquo;wav_filename&rdquo; - path of the sample, &ldquo;wav_filesize&rdquo; - samples size given in bytes, &ldquo;transcript&rdquo; - transcription target for the sample. A python script &ldquo;<strong>py</strong>&rdquo; was created for CSV creation, but it requires data to be structured so that &ldquo;train&rdquo;, &ldquo;dev&rdquo; and &ldquo;test&rdquo; folders have a folder &ldquo;all&rdquo; and in that folder there are folders named by each command. So the dataset is divided and the same data is put in two places, for example: &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/train&gt; </em>and &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/train/all/annille&gt; </em>for training and for CSV creation.</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="11">
+                    <li>At &lt;<em>/home/tuomas/Desktop/DeepSpeech-0.9.1/&gt;<br /> </em>python3 create_csv.py --target train<br /> python3 create_csv.py --target dev<br /> python3 create_csv.py --target test</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="12">
+                    <li>Training the model:<br /> sudo python3 DeepSpeech.py --train_files /home/tuomas/Desktop/DeepSpeech-0.9.1/train/train.csv \<br /> --dev_files /home/tuomas/Desktop/DeepSpeech-0.9.1/dev/dev.csv \<br /> --test_files /home/tuomas/Desktop/DeepSpeech-0.9.1/test/test.csv \<br /> --train_batch_size 80 \<br /> --dev_batch_size 40 \<br /> --test_batch_size 40 \<br /> --n_hidden 376 \<br /> --epochs 55 \<br /> --learning_rate 0.00095 \<br /> --report_count 100 \<br /> --export_dir /home/tuomas/Desktop/DeepSpeech-0.9.1/model_export/ \<br /> --checkpoint_dir /home/tuomas/Desktop/DeepSpeech-0.9.1/checkout/ \<br /> --alphabet_config_path /home/tuomas/Desktop/DeepSpeech-0.9.1/data/lm/alphabet.txt \<br /> --use_allow_growth true \<br /> --dropout_rate 0.3 \<br /> --summary_dir /home/tuomas/Desktop/DeepSpeech-0.9.1/summary \<br /> --export_tflite \<br /> --cache_for_epochs 2 \<br /> --augment reverb[p=0.1,delay=50.0~30.0,decay=10.0:2.0~1.0] \<br /> --augment resample[p=0.1,rate=12000:8000~4000] \<br /> --augment codec[p=0.1,bitrate=48000:16000] \<br /> --augment volume[p=0.1,dbfs=-10:-40] \<br /> --augment tempo[p=0.1,factor=1~0.5] \<br /> --augment warp[p=0.1,nt=4,nf=1,wt=0.5:1.0,wf=0.1:0.2] \<br /> --augment frequency_mask[p=0.1,n=1:3,size=1:5] \<br /> --augment time_mask[p=0.1,domain=signal,n=3:10~2,size=50:100~40] \<br /> --augment dropout[p=0.1,rate=0.05] \<br /> --augment add[p=0.1,domain=signal,stddev=0~0.5] \<br /> --augment multiply[p=0.1,domain=features,stddev=0~0.5]</li>
+                    </ol>
+                    <p><br /> NOTE: The above command is for Android platform model. For Linux platform exclude the &ldquo;--export_tflite&rdquo; command. &ldquo;&mdash;augment&rdquo; commands are optional. Other parameters can be tweaked for slightly different outcomes. Batch size depends on GPU performance. Hidden layers are between 100 &ndash; 2400, but increasing the amount of layers slows the training. 50 epochs should be enough to achieve loss under one.</p>
+                    <p>&nbsp;</p>
+                    <ol start="13">
+                    <li>Only for the Linux platform model. Convert PB file to PBMM file:<br /> python3 util/taskcluster.py --source tensorflow --artifact convert_graphdef_memmapped_format --branch r1.15 --target .<br /> <br /> ./convert_graphdef_memmapped_format --in_graph=./model_export/output_graph.pb --out_graph=./model_export/output_graph.pbmm</li>
+                    </ol>
+                    <p>&nbsp;</p>
+                    <ol start="14">
+                    <li>A produced model file (model.pbmm or model.tflite) and a scorer file (kenlm.scorer) that are used for speech recognition interface in Linux or Android platform are completed.</li>
+                    </ol>
+                    </span>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <h1>5 Android application</h1>
+                    <p>&nbsp;</p>
+                    <p>Android demo application builds upon the official DeepSpeech example &ldquo;android_mic_streaming&rdquo; (<a href="https://github.com/mozilla/DeepSpeech-examples">https://github.com/mozilla/DeepSpeech-examples</a>). Modified source code is attached with documentation. Code is opened with Android Studio IDE and it uses Kotlin as the coding language.</p>
+                    <p>&nbsp;</p>
+                    <p>When phone is paired with Android Studio, model and scorer files are copied to the phone&rsquo;s SD-card root folder through Android Studio terminal using the following command: <em>sudo adb -d push /home/tuomas/Desktop/DeepSpeech-0.9.1/model_export/output_graph.tflite /home/tuomas/Desktop/DeepSpeech-0.9.1/data/lm/kenlm_tflite.scorer /storage/emulated/0/Android/data/org.deepspeechdemo/files/</em></p>
+                    <p>&nbsp;</p>
+                    <p>Crucial modification to improve the recognition functionality is that a new recording stream is started after every prediction. Also functions for giving a name and storing it to the &ldquo;name.txt&rdquo; file and making a phone call are added.</p>
+                    <p>&nbsp;</p>
+                    <p>If no name is given (no name.txt file created) and command &ldquo;moi&rdquo; is detected, then the app responds with audio: &ldquo;Minulla ei ole nime&auml;. Olenko Olka vai Onni?&rdquo;. Then when it detects &ldquo;Olka&rdquo; or &ldquo;Onni&rdquo; the name is saved to the name.txt file and next time it detects the &ldquo;moi&rdquo; command it responds with: &ldquo;Nimeni on Onni/Olka&rdquo;.</p>
+                    <p>&nbsp;</p>
+                    <p>At the moment &ldquo;soita&rdquo; command has two phone numbers under two names. It makes a call to dedicated number if it detects &ldquo;soita&rdquo; and after that detects &ldquo;otolle&rdquo; or &ldquo;minnalle&rdquo;.</p>
+                    <p>&nbsp;</p>
+                    <p>Video for Android Application demo: <a href="https://www.youtube.com/watch?v=0DVFdk3BF_g&amp;feature=youtu.be&amp;ab_channel=TuomasKorpi">https://www.youtube.com/watch?v=0DVFdk3BF_g&amp;feature=youtu.be&amp;ab_channel=TuomasKorpi</a></p>
+                    <p>&nbsp;</p>
+                    <p>Video for Laptop demo: https://www.youtube.com/watch?v=BWyiBhLO1H0&amp;feature=youtu.be&amp;ab_channel=TuomasKorpi</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <h1>&nbsp;</h1>
+                    <h1>6 Results</h1>
+                    <p>Attached with documentation the &ldquo;<strong>models</strong>&rdquo; folder includes models trained with different training parameters, which are listed in the folder name. Model version 5 is used in the Linux demo and it recognizes all of the 16 commands. Model version 10 is used in the Android app and it recognizes 11 commands, excluding the following: kyll&auml;, ei, tule t&auml;nne, netti. There were small differences when training with different parameters.</p>
+                    <p>&nbsp;</p>
+                    <p>The recognition is quite accurate, but it struggles with noisy environments. No apparent issues are present even when distance is increased to 5-10 meters (see video for proof). More training would certainly fix the issue with noisy environments, it has, so far, only been trained with the voices of 4 people, the more the better. For instance the commands &ldquo;onni&rdquo; and &ldquo;anni&rdquo; are very similar, so sometimes it mixes them.</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <h1>7 Conclusion and going forward</h1>
+                    <p>In optimal conditions, meaning no background noise, the model performs quite well and is able to make right predictions and implement given functions based on them most of the time. If more speakers would contribute to dataset and background noise augmentation would be added, then the performance could improve greatly.</p>
+                    <p>&nbsp;</p>
+                    <p>It would be interesting to try to develop the model in a more general direction since there are some Finnish datasets available on the internet.</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </div>
             </div>
             <div id="p7" class="project project7 box">
                

@@ -172,4 +172,13 @@ align-items: center; /* center items vertically, in this case */
   background-color:rgb(42, 45,46);
   cursor: pointer;
 }
+a{
+  word-break: break-all;
+}
+em{
+  word-break: break-all;
+}
+.pcPath{
+  word-break: break-all;
 
+}

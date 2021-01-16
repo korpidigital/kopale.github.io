@@ -164,9 +164,7 @@ function clickLinks(){
             linkico.style.borderLeft = 'solid 4px #D4D4D4';
             // output.style.display = "none";
             footer.scrollIntoView(); 
-            growFooterIcos();
-            
-            
+            growFooterIcos();    
         }
         
         //CLOSE
@@ -178,8 +176,6 @@ function clickLinks(){
             tab1.scrollIntoView();
             smallFooterIcos();
             footer.style.flexDirection = "row";
-            
-
         }
     linkcount ++;
        
@@ -206,7 +202,6 @@ function clickTab1(){
         tab1.style.backgroundColor ="#1E1E1E";
         aside.style.display = "block";
         asideProject.style.display = "none";
-
         //return boxes
         returnBoxes();       
 }}

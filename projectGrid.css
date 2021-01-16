@@ -53,6 +53,10 @@
 .project:hover {
     cursor: pointer;
 }
+.projectVideo{
+  width:70%;
+  height:415px;
+}
 
 
 
@@ -70,7 +74,12 @@
 }
 .project.project5.box{
   background-image: url('svg/p5.svg');
-
+}
+#p6{
+  background-image: url('svg/p6.svg');
+}
+#p7{
+  background-image: url('svg/p7.svg');
 }
 a{
   color: white;
