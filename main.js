@@ -100,17 +100,18 @@ function smallFooterIcos(){
 //return project boxes all to original size
 function returnBoxes(){
     document.querySelectorAll('.project').forEach(item => {
-         console.log("iam block");   
-        item.style.display ="block"; 
+        console.log("iam block");   
+        item.style.display ="block";
         selectedBox.style.animation = "smallBox 0s forwards";
         //images are named same as project pox id
         selectedBox.style.backgroundImage = `url('svg/${selectedBox.id}.svg')`;
         //hide close btn 
         selectedBox.children[0].style.display = "none";
         selectedBox.children[1].style.display = "none";
-        
-        
+
     })
+
+
 }
    
 //FILE ICON CLICK OPEN MENU
@@ -157,14 +158,12 @@ function clickLinks(){
     return function(){    
         //OPEN
         
-        if (linkcount % 2 != 0  ) {
-            
-            
+        if (linkcount % 2 != 0  ) {  
             footer.style.height = "216px";
             linkico.style.borderLeft = 'solid 4px #D4D4D4';
             // output.style.display = "none";
             footer.scrollIntoView(); 
-            growFooterIcos();    
+            growFooterIcos(); 
         }
         
         //CLOSE
@@ -176,6 +175,8 @@ function clickLinks(){
             tab1.scrollIntoView();
             smallFooterIcos();
             footer.style.flexDirection = "row";
+            
+
         }
     linkcount ++;
        
@@ -192,7 +193,6 @@ function clickTab2(){
         aside.style.display = "none";
         asideProject.style.display = "block";
 
-
 }}
 tab1.addEventListener("click", clickTab1());
 function clickTab1(){
@@ -202,6 +202,7 @@ function clickTab1(){
         tab1.style.backgroundColor ="#1E1E1E";
         aside.style.display = "block";
         asideProject.style.display = "none";
+
         //return boxes
         returnBoxes();       
 }}
@@ -224,7 +225,6 @@ document.querySelectorAll('.project').forEach(item => {
         //close btn visible
         selectedBox.children[0].style.display = "block";
         selectedBox.children[1].style.display = "block";
-   
     })
 })
 //event listener for list projects click
@@ -310,13 +310,13 @@ document.querySelectorAll('.list').forEach(item => {
     })
 })
 
-
 //close btn
 document.querySelectorAll('.minimize').forEach(item => {   
     item.addEventListener('click', event => {
-       returnBoxes();
-       event.stopPropagation();
+      returnBoxes();
+      event.stopPropagation();
       selectedBox ="none";
     })
+    
 })
 

@@ -27,6 +27,7 @@
   padding-top: 40px;
   text-align: left;
   font-weight: 500;
+  
 
 }
 
@@ -34,20 +35,23 @@
     border: #D4D4D4 solid 1px;
     background-color: #3C3C3C;
     height: 250px;
-    width: 269px;
-    margin: 0px ;  
+    margin: 0px ; 
     animation: createBox .25s;
     display: flex;
     flex-direction: column;
+    width: 250px;
     min-height: 250px;
     height: 100%;
     margin: 3px;
     font-size: 45px;
-    font-weight: 1000;
+    /* font-weight: 0; */
     font-family: Impact;
     color: seashell;
-    -webkit-text-stroke: black 2px;
     padding-left: 5px;
+    /* justify-content: space-between; */
+    text-shadow: 0 0 4px #000; /* horizontal-offset vertical-offset 'blur' colour */
+    -moz-text-shadow: 0 0 4px #000;
+    -webkit-text-shadow: 0 0 4px #000;
     
 }
 .project:hover {
@@ -57,8 +61,11 @@
   width:70%;
   height:415px;
 }
-
-
+.project{
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* overflow: hidden; */
+}
 
 .project.project1.box{
   background-image: url('svg/p1.svg');
@@ -88,9 +95,27 @@ a{
   display: block;
   margin: 0 auto;
 }
+.emptySpace1{
+  margin-top: 176px;
+}
+.emptySpace2{
+  margin-top: 120px;
+}
+.emptySpace3{
+  margin-top: 65px;
+}
+.hashTag{
+  font-size: 14px;
+  font-weight: bold;
+  /* -webkit-text-stroke: black 1px; */
+  letter-spacing: 0px;
+  background-color: black;
+  opacity: 0.7;
+  margin-left: -4px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-
-
+  
+}
 
 
 

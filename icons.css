@@ -11,6 +11,7 @@
     float: right;
   }
 
+
   #fileico{
     width: 40px;
     height: 40px;
@@ -20,7 +21,6 @@
     border-left: solid 4px #333333;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    
   }
   #linkico{
     width: 40px;
@@ -32,6 +32,33 @@
     background-repeat: no-repeat;
     border-left: solid 4px #333333;
     
+ 
+  }
+  .barIco:hover .tooltip{
+    display: block;
+    opacity: 0.9;
+}
+  .tooltip{
+    
+    display: block;
+    color: black;
+    background-color: white;
+    border: solid 1px #333333;
+    text-align: center;
+    z-index: 1;
+    width: 200px;
+    position: relative;
+    width: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    padding: 2px;
+    opacity: 0.0;
+    top: 41px;
+    left: 20px;
+    transition-property: opacity;
+    transition-duration: 0s;
+    transition-delay: 0.4s;
+
  
   }
   .smallrun{
