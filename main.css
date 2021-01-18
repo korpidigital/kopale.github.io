@@ -10,6 +10,7 @@ html, body{
   margin-bottom: 0;
   height: 100%;
   background-color: #007ACC;
+  
 }
 .main{
   width: 100vw;
@@ -104,11 +105,10 @@ html, body{
   padding-bottom: 10px;
   margin-left:-50px;
   margin-bottom: 10px;
-}
 
+}
 .listItem{
-  position: relative;
-  right: -30px;
+  padding-left: 32px;
 }
 
 
@@ -167,9 +167,9 @@ justify-content: center; /* center items horizontally, in this case */
 align-items: center; /* center items vertically, in this case */
 }
 
-.projectlist li:hover
+.listItem:hover
 {
-  background-color:rgb(42, 45,46);
+  background-color: #333333 !important;
   cursor: pointer;
 }
 a{
@@ -182,4 +182,8 @@ em{
   word-break: break-all;
 
 }
+
+
+
+
 

@@ -12,7 +12,8 @@ const runOutput = '<div id="outputtxt"><span class="outtitle">OUTPUT</span><br><
 +'</span> ) on the left or click tab on<br>' 
 +'the top to see my projects.</div>';
 
-//elements
+//___________DOM SELECTORS_____________________________
+/////////////////////////////////////////////////////////
 const menuopen = document.getElementById("menuopen");
 const menubar = document.getElementById("menubar");
 const footer = document.getElementById("footer");
@@ -31,6 +32,8 @@ const rownum = document.getElementById("rownum");
 const asideProject = document.getElementById("asideProject");
 const main = document.getElementById("mainId");
 const modal = document.getElementById("myModal");
+const listItem = document.getElementById("listItem");
+
 
 const footerIcos = document.querySelectorAll("footerIcos");
 const minimize = document.querySelectorAll('.minimize');
@@ -39,27 +42,24 @@ const githubIco = document.querySelectorAll('.githubIco');
 const youtubeIco = document.querySelectorAll('.youtubeIco');
 const projectPage = document.querySelectorAll('.projectPage');
 const body = document.body;
-
-
-
+//////////////////////////////////////////////////////////////////////
+//____________VARIABLES______________________________________________
+/////////////////////////////////////////////////////////////////////
 //what tab are we on?
 let tab = "tab1";
-asideProject.style.display = "none";
-//what project box is selected
+//what project box is selected?
 let selectedBox = "none";
-
-//print row numbers
-function getNumRow(){
-    let num = "";
-    for (let index = 1; index < 20; index++) {
-        num = num + index +"<br>";
-    }
-    rownum.innerHTML = num;
-}
+//is category selected?
+let category ="none";
+let prevItem = "none";
+//////////////////////////////////////////////////////////////////////
+//_________________ON LOAD___________________________________________
+/////////////////////////////////////////////////////////////////////
+//hide projectpage
+asideProject.style.display = "none";
+//make row numbers
 getNumRow();
 
-let screenH = window.innerHeight;
-console.log(screenH);
 
 function growFooterIcos(){
     let screenW = window.innerWidth;
@@ -71,9 +71,6 @@ function growFooterIcos(){
             item.style.height = "50px";
             footer.style.flexDirection = "column";
             item.style.marginTop = "5vh";
-           
-            
-            
 
         }
         else{
@@ -97,22 +94,6 @@ function smallFooterIcos(){
     })
 }
 
-//return project boxes all to original size
-function returnBoxes(){
-    document.querySelectorAll('.project').forEach(item => {
-        console.log("iam block");   
-        item.style.display ="block";
-        selectedBox.style.animation = "smallBox 0s forwards";
-        //images are named same as project pox id
-        selectedBox.style.backgroundImage = `url('svg/${selectedBox.id}.svg')`;
-        //hide close btn 
-        selectedBox.children[0].style.display = "none";
-        selectedBox.children[1].style.display = "none";
-
-    })
-
-
-}
    
 //FILE ICON CLICK OPEN MENU
 let menucount = 1;
@@ -175,8 +156,7 @@ function clickLinks(){
             tab1.scrollIntoView();
             smallFooterIcos();
             footer.style.flexDirection = "row";
-            
-
+           
         }
     linkcount ++;
        
@@ -187,12 +167,9 @@ function clickLinks(){
 tab2.addEventListener("click", clickTab2());
 function clickTab2(){
     return function(){
-        tab = "tab2";
-        tab2.style.backgroundColor ="#1E1E1E";
-        tab1.style.backgroundColor ="#2D2D2D";
-        aside.style.display = "none";
-        asideProject.style.display = "block";
-
+        
+        projectTab();
+        displayAllProjects();
 }}
 tab1.addEventListener("click", clickTab1());
 function clickTab1(){
@@ -204,9 +181,9 @@ function clickTab1(){
         asideProject.style.display = "none";
 
         //return boxes
-        returnBoxes();       
+        returnBoxes(); 
+        unselectList();     
 }}
-
 
 //event listner for project box click. show only selected box and make it big.
 document.querySelectorAll('.project').forEach(item => {
@@ -216,27 +193,21 @@ document.querySelectorAll('.project').forEach(item => {
         document.querySelectorAll('.project').forEach(item => {
             if (item.id != clickId) {
                 item.style.display ="none"; 
-                console.log("iam none");
             }
         })
-        selectedBox.style.animation = "growBox .25s forwards";
-        selectedBox.style.backgroundImage = "none";
-
-        //close btn visible
-        selectedBox.children[0].style.display = "block";
-        selectedBox.children[1].style.display = "block";
+        growBox();
     })
 })
 //event listener for list projects click
 document.querySelectorAll('.list').forEach(item => {
     item.addEventListener('click', event => {
-        //move to project tab
-        tab = "tab2";
-        tab2.style.backgroundColor ="#1E1E1E";
-        tab1.style.backgroundColor ="#2D2D2D";
-        aside.style.display = "none";
-        asideProject.style.display = "block";
-        //retun boxes to original size 
+        projectTab();
+        
+        if(prevItem != "none"){
+           prevItem.style.backgroundColor = "#262525"; 
+        }
+        
+        
         
         //swich case to pair list and box IDs
         let boxId = "";
@@ -283,29 +254,18 @@ document.querySelectorAll('.list').forEach(item => {
                 //make previous selected box small
             }
             else{     
-                item.style.display ="block"; 
-                if (selectedBox != "none") {
-                    //this from returnBox function
-                    selectedBox.style.animation = "smallBox 0s forwards";
-                    //images are named same as project pox id
-                    selectedBox.style.backgroundImage = `url('svg/${selectedBox.id}.svg')`;
-                    //hide close btn 
-                    selectedBox.children[0].style.display = "none";
-                    selectedBox.children[1].style.display = "none";
-                }
-                
+                item.style.display ="block";    
+                returnBox()    
             }
         })
-        
-
         //get this box
         selectedBox = document.getElementById(boxId);
-        selectedBox.style.animation = "growBox .25s forwards";
-        selectedBox.style.backgroundImage = "none";
-
-        //close btn visible
-        selectedBox.children[0].style.display = "block";
-        selectedBox.children[1].style.display = "block";
+        growBox();
+        document.getElementById(item.id).style.backgroundColor = "#0362fc";
+        prevItem = item
+        document.querySelectorAll('.menuCategory').forEach(item => {
+            item.style.backgroundColor = "#262525";
+        })
    
     })
 })
@@ -313,10 +273,120 @@ document.querySelectorAll('.list').forEach(item => {
 //close btn
 document.querySelectorAll('.minimize').forEach(item => {   
     item.addEventListener('click', event => {
-      returnBoxes();
-      event.stopPropagation();
-      selectedBox ="none";
+        displayAllProjects();
+        unselectList();
     })
-    
 })
+//Category click listener
+document.querySelectorAll('.menuCategory').forEach(item => {
+    item.addEventListener('click', event => {
+        projectTab();
+        returnBox();
+        if(category != "none"){
+            document.getElementById(category).style.backgroundColor = "#262525";
+        }
+        
+        if(item.id == "categoryWeb"){
+            checkProjectClass(item.id);
+        }
+        if(item.id == "categoryMobile"){
+            checkProjectClass(item.id);
+        }
+        if(item.id == "categoryCustomer"){
+            checkProjectClass(item.id);
+        }
+        if(item.id == "categoryMachine"){
+            checkProjectClass(item.id);
+        }
+        if(item.id == "categoryIot"){
+            checkProjectClass(item.id);
+        }
+        if(item.id == "categoryAll"){
+            displayAllProjects();
+        }
+        category = item.id;
+        document.getElementById(category).style.backgroundColor = "#0362fc";
+        document.querySelectorAll('.list').forEach(item => {
+            item.style.backgroundColor = "#262525";
+        })
+    })
+})
+
+        
+
+
+
+//__________________FUNCTIONS________________________
+/////////////////////////////////////////////
+function displayAllProjects(){
+    returnBoxes();
+    event.stopPropagation();
+    selectedBox ="none";
+    category = "none";
+
+}
+//return project boxes all to original size
+function returnBoxes(){
+    document.querySelectorAll('.project').forEach(item => {  
+        item.style.display ="block";
+        returnBox()
+    })
+}
+function returnBox(){
+    if (selectedBox != "none") {
+        //this from returnBox function
+        selectedBox.style.animation = "smallBox 0s forwards";
+        //images are named same as project pox id
+        selectedBox.style.backgroundImage = `url('svg/${selectedBox.id}.svg')`;
+        //hide close btn 
+        selectedBox.children[0].style.display = "none";
+        selectedBox.children[1].style.display = "none";
+    }
+}
+//got to tab2
+function projectTab(){
+    //move to project tab
+    tab = "tab2";
+    tab2.style.backgroundColor ="#1E1E1E";
+    tab1.style.backgroundColor ="#2D2D2D";
+    aside.style.display = "none";
+    asideProject.style.display = "block";
+}
+function growBox(){
+    selectedBox.style.animation = "growBox .25s forwards";
+    selectedBox.style.backgroundImage = "none";
+    //close btn visible
+    selectedBox.children[0].style.display = "block";
+    selectedBox.children[1].style.display = "block";
+}
+//print row numbers
+function getNumRow(){
+    let num = "";
+    for (let index = 1; index < 20; index++) {
+        num = num + index +"<br>";
+    }
+    rownum.innerHTML = num;
+}
+function checkProjectClass(category){
+    document.querySelectorAll('.project').forEach(item => {
+        if (item.classList.contains(category)){
+            item.style.display ="block";   
+        }
+        else{
+            item.style.display ="none"; 
+        }
+    })
+}
+function unselectList(){
+    document.querySelectorAll('.menuCategory').forEach(item => {
+        item.style.backgroundColor = "#262525";
+    })
+    document.querySelectorAll('.list').forEach(item => {
+    
+        item.style.backgroundColor = "#262525";
+    })
+}
+
+///////////////////////////////////////////////////////////////////////
+
 

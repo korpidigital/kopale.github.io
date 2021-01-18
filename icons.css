@@ -48,7 +48,7 @@
     z-index: 1;
     width: 200px;
     position: relative;
-    width: 50px;
+    width: min-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12px;
     padding: 2px;
