@@ -3,6 +3,7 @@
     /* mobile */
      
      .menuopen{flex-direction: row;}
+     .menuopen{position: relative;}
      .menuopen{min-height: 100px;}
      .mobile{flex-direction: column;}
      .codetxt{font-size: 11px;}
