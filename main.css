@@ -62,6 +62,7 @@ html, body{
   color: #D4D4D4;
   padding-top: 10px;
   overflow: hidden;
+  position: relative;
 }
 .aside{
   /* padding-top: 21px; */
