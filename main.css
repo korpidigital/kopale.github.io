@@ -10,11 +10,13 @@ html, body{
   margin-bottom: 0;
   height: 100%;
   background-color: #007ACC;
+  /* overflow: hidden; */
   
 }
 .main{
   width: 100vw;
  height: 100%;
+ 
 }
 
 .flex-cont {
@@ -33,6 +35,7 @@ html, body{
   color: #C2C2C2;
   font-size: 11px;
   text-align: center;
+  z-index: 1;
 }
 
 .tab{
@@ -65,9 +68,11 @@ html, body{
   display: flex;
   flex-direction: column;
   background-color:#1E1E1E;
-  /* min-height: 85vh; */
+  /* min-height: 87vh; */
   width: 100%;
   /* padding-bottom: 85px; */
+  
+ 
   
 }
 
@@ -115,6 +120,7 @@ html, body{
 .tabback {
   background-color: #252526;
   width: 100%;
+  z-index: 1;
 }
 
 .tabtxt1{
@@ -139,11 +145,13 @@ html, body{
   width: 40%;
   min-width: 130px;
   margin-left: -50px;
+  z-index: 1;
 }
 .tab2 {
   background-color: #2D2D2D;
   width: 40%;
   min-width: 130px;  
+  z-index: 1;
 } 
 .tab{
   display: flex;
@@ -155,7 +163,7 @@ html, body{
 background-color: #007ACC;
 width: 100%;
 height: 21px;
-position: relative;
+position: relative;;
 left: -60px;
 padding-right: 60px;
 padding-top: 1px;
@@ -165,6 +173,7 @@ display: flex;
 flex-direction: row; 
 justify-content: center; /* center items horizontally, in this case */
 align-items: center; /* center items vertically, in this case */
+z-index: 1;
 }
 
 .listItem:hover

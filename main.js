@@ -33,7 +33,8 @@ const asideProject = document.getElementById("asideProject");
 const main = document.getElementById("mainId");
 const modal = document.getElementById("myModal");
 const listItem = document.getElementById("listItem");
-
+const emailico = document.getElementById("emailico");
+const code = document.getElementById("code");
 
 const footerIcos = document.querySelectorAll("footerIcos");
 const minimize = document.querySelectorAll('.minimize');
@@ -132,6 +133,31 @@ function runcode(){
             runbtn.style.backgroundImage = "url('icons/runbtngrey.svg')";
      
 }}
+//emailico click
+emailico.addEventListener("click", contact());
+function contact(){
+    return function(){        
+                 
+        //tab1
+        mainPage();
+
+          getNumRow();
+          code.style.marginTop ="-300px";
+          code.style.height ="700px";
+          code.style.overflow ="visible";
+
+     
+}}
+function mainPage(){
+    tab = "tab1";
+        tab2.style.backgroundColor ="#2D2D2D";
+        tab1.style.backgroundColor ="#1E1E1E";
+        aside.style.display = "block";
+        asideProject.style.display = "none";
+        //return boxes
+        returnBoxes(); 
+        unselectList();
+}
 //Link ico click
 linkcount = 1;
 linkico.addEventListener("click", clickLinks());
@@ -144,7 +170,8 @@ function clickLinks(){
             linkico.style.borderLeft = 'solid 4px #D4D4D4';
             // output.style.display = "none";
             footer.scrollIntoView(); 
-            growFooterIcos(); 
+            growFooterIcos();
+            // footer.style.top = "-200px";
         }
         
         //CLOSE
@@ -174,15 +201,12 @@ function clickTab2(){
 tab1.addEventListener("click", clickTab1());
 function clickTab1(){
     return function(){
-        tab = "tab1";
-        tab2.style.backgroundColor ="#2D2D2D";
-        tab1.style.backgroundColor ="#1E1E1E";
-        aside.style.display = "block";
-        asideProject.style.display = "none";
-
-        //return boxes
-        returnBoxes(); 
-        unselectList();     
+        // output.style.zIndex = "1";  
+        mainPage();
+        code.style.height = "400px";
+        code.style.marginTop ="0";
+        code.style.overflow = "hidden";
+         
 }}
 
 //event listner for project box click. show only selected box and make it big.
@@ -361,10 +385,21 @@ function growBox(){
 }
 //print row numbers
 function getNumRow(){
+    let count = 0;
     let num = "";
-    for (let index = 1; index < 20; index++) {
+    if(window.innerWidth < 601){
+        count = 53;
+    }
+  
+    else{
+        count = 35
+    }
+    
+    for (let index = 1; index <count; index++) {
         num = num + index +"<br>";
     }
+    console.log("rownum_________________________")
+
     rownum.innerHTML = num;
 }
 function checkProjectClass(category){

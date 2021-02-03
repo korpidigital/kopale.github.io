@@ -9,13 +9,25 @@
     line-height: 1.28;
     padding-left: 30px;
     padding-right: 10px;
+    max-height:55.5vh;
     
   }
    .code{
     /* padding-top: 10px; */
     /* margin-top: 10px; */
-  } 
+    /* position: relative;
+    top: 0px; */
+    overflow: hidden;
+    margin-top: 0px;
+    transition: margin-top 2s, height 2s;
+    height: 400px;
 
+  } 
+#contacttxt{
+  /* margin-top: 20px; */
+  height: 200px;
+  margin-top: 100px;
+}
  
 
   .outputbox{
@@ -24,6 +36,8 @@
     color: #C2C2C2;
     /* padding-bottom: 135px; */
     height: 170px;
+    
+  
     
   }
  
@@ -105,5 +119,6 @@
     border-top: solid 1px #707070;
     /* width: 96vw; */
     display: flex;
-    
+    z-index: 1;
+    position: relative;
   }
